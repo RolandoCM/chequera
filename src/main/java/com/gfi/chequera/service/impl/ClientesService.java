@@ -6,12 +6,15 @@ package com.gfi.chequera.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.mail.MessagingException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gfi.chequera.converter.ClientesConverter;
 import com.gfi.chequera.entity.Clientes;
 import com.gfi.chequera.model.ClientesModel;
+import com.gfi.chequera.model.MailModel;
 import com.gfi.chequera.repository.ClientesRepository;
 import com.gfi.chequera.service.IClientesService;
 
@@ -23,9 +26,11 @@ import com.gfi.chequera.service.IClientesService;
 @Service("ClientesService")
 public class ClientesService implements IClientesService{
 	@Autowired
-	ClientesConverter clienteConverter;
+	private ClientesConverter clienteConverter;
 	@Autowired
-	ClientesRepository clienteRepository;
+	private ClientesRepository clienteRepository;
+	@Autowired
+	private SendMailService sendMailService;
 	
 	private Clientes cliente;
 	private ClientesModel clienteModel;
@@ -44,6 +49,17 @@ public class ClientesService implements IClientesService{
 	public void saveCliente(ClientesModel clienteModel) {
 		cliente = clienteConverter.clientesToEntity(clienteModel);
 		clienteRepository.save(cliente);
+		MailModel mail = new MailModel();
+		
+		mail.setFrom("no-reply@memorynotfound.com");
+		mail.setTo(cliente.getcCorreo());
+		mail.setSubject("Datos de cliente");
+		mail.setContent("registro correcto");
+		try {
+			sendMailService.sendMailMessage(mail);
+		} catch (MessagingException e) {
+			e.printStackTrace();
+		}
 	}
 	@Override
 	public boolean deleteCliente(int idCliente) {

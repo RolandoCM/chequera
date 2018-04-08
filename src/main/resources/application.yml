@@ -17,3 +17,20 @@ spring:
   
   thymeleaf:
     cache: false
+    
+    
+    
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: castillor493@gmail.com
+    password: C4st1ll0{r}
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: true

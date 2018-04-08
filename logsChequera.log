@@ -244,3 +244,4 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+INFO    2018-04-08 12:17:52,916 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.ClienteController  - ClientesModel [idCliente=0, cNombre=Rolando, cDireccion=Tuberos 12 San Pedrito, cRfc=0000000000, cRazon=r, cCorreo=castillor493@gmail.com, cStatus=false, chequeraModel=[]]

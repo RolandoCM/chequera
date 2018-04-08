@@ -30,6 +30,7 @@ public class BancosConverter {
 	/*Converter bancos model to bancos entity*/
 	public Bancos bancosToEntity (BancosModel bancoModel) {
 		Bancos banco = new Bancos();
+		banco.setIdBancos(bancoModel.getIdBancos());
 		banco.setbNombre(bancoModel.getbNombre());
 		banco.setbDireccion(bancoModel.getbDireccion());
 		banco.setbSucursal(bancoModel.getbSucursal());

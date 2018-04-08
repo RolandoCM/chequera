@@ -15,5 +15,5 @@ import com.gfi.chequera.entity.Chequera;
  * @date 05/04/2018
  */
 public interface ChequeraRepository extends  JpaRepository<Chequera, Serializable>{
-
+	public Chequera findByIdChequera(int idChequera);
 }

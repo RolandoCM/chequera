@@ -9,11 +9,9 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -64,17 +62,18 @@ public class BancoController {
 		mav.addObject("banco", bancoModel);
 		return mav;
 	}
-	@PostMapping("/update")
-	public String updateBanco(@ModelAttribute(name="banco") BancosModel bancoModel) {
-		bancoService.updateBanco(bancoModel);
+	//update and insert
+	@PostMapping("/add")
+	public String addBanco(@ModelAttribute(name="banco") BancosModel bancoModel) {
+		bancoService.saveBanco(bancoModel);
 		logger.info(bancoModel.toString());
-		return ConstantView.updateBanco;
+		return "redirect:/bancos/listar";
 	}
 	/*Update methods finish*/
 	
 	@RequestMapping("/delete")
 	public String deleteBanco(@RequestParam(name="idBanco") int idBanco) {
 		bancoService.deleteBanco(idBanco);
-		return ConstantView.deleteBanco;
+		return "redirect:/bancos/listar";
 	}
 }

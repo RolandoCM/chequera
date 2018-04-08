@@ -18,6 +18,7 @@ public class ClientesConverter {
 	/*Convertir cliente entity to cliente model*/
 	public Clientes clientesToEntity(ClientesModel clienteModel) {
 		Clientes cliente = new Clientes();
+		cliente.setIdCliente(clienteModel.getIdCliente());
 		cliente.setcNombre(clienteModel.getcNombre());
 		cliente.setcDireccion(clienteModel.getcDireccion());
 		cliente.setcCorreo(clienteModel.getcCorreo());

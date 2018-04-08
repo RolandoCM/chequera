@@ -40,12 +40,6 @@ public class BancosService implements IBancosService {
 		return bancoModel;
 	}
 	@Override
-	public void updateBanco(BancosModel bancoModel) {
-		Bancos banco =bancoConverter.bancosToEntity(bancoModel);
-		banco.setIdBancos(bancoModel.getIdBancos());
-		bancoRepository.save(banco);
-	}
-	@Override
 	public boolean deleteBanco(int idBanco) {
 		Bancos banco = bancoRepository.findByIdBancos(idBanco);
 		banco.setbStatus(false);

@@ -55,7 +55,7 @@ public class ChequeraConverter {
 		Chequera chequera = new Chequera();
 		Bancos banco = bancosConverter.bancosToEntity(chequeraModel.getBanco());
 		Clientes cliente = clientesConverter.clientesToEntity(chequeraModel.getCliente());
-		
+		chequera.setIdChequera(chequeraModel.getIdChequera());
 		chequera.setChClaveInterbancaria(chequeraModel.getChClaveInterbancaria());
 		chequera.setChFecha(chequeraModel.getChFecha());
 		chequera.setChNumCuenta(chequeraModel.getChNumCuenta());

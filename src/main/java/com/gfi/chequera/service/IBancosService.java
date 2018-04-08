@@ -16,7 +16,6 @@ import com.gfi.chequera.model.BancosModel;
 public interface IBancosService {
 	public void saveBanco(BancosModel bancoModel);
 	public List<BancosModel> listBancos();
-	public void updateBanco(BancosModel bancoModel);
 	public boolean deleteBanco(int idBanco);
 	public BancosModel searchBanco(int idBanco);
 }

@@ -14,12 +14,12 @@ import com.gfi.chequera.controller.BancoController;
  * @email castillomartinez@acm.org
  * @date 06/04/2018
  */
-//@ControllerAdvice
+@ControllerAdvice
 public class ExceptionChequera {
 	private static final Logger logger = Logger.getLogger(BancoController.class);
 	@ExceptionHandler(Exception.class)
-	public String exceptionHandler() {
-		logger.error("Se encontro un error");
+	public String exceptionHandler(Exception e) {
+		logger.error("Se encontro un error", e);
 		
 		return "404";
 	}

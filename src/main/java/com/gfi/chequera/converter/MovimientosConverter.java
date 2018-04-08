@@ -32,6 +32,7 @@ public class MovimientosConverter {
 		Chequera chequera = chequeraConverter.ChequeraToEntity(movimientoModel.getChequera());
 		Tipo_Movimiento tipoMovimiento = tipoMovimientoConverter.tipoMovimientoToEntity(movimientoModel.getTipoMovimiento());
 		
+		movimiento.setIdMovimientos(movimientoModel.getIdMovimiento());
 		movimiento.setmConcepto(movimientoModel.getmConcepto());
 		movimiento.setmFecha(movimientoModel.getmFecha());
 		movimiento.setmMonto(movimientoModel.getmMonto());

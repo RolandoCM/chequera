@@ -1,0 +1,246 @@
+INFO    2018-04-06 00:13:31,740 [http-nio-8080-exec-3] com.gfi.chequera.controller.BancoCRUDController  - Se a listado correctamente los bancos
+ERROR   2018-04-06 00:35:12,128 [http-nio-8080-exec-1] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+INFO    2018-04-06 01:17:55,007 [http-nio-8080-exec-2] com.gfi.chequera.controller.BancoCRUDController  - Se a listado correctamente los bancos
+INFO    2018-04-06 01:20:34,550 [http-nio-8080-exec-4] com.gfi.chequera.controller.BancoCRUDController  - Se a listado correctamente los bancos
+INFO    2018-04-06 11:08:18,162 [http-nio-8080-exec-1] com.gfi.chequera.controller.BancoCRUDController  - Se a listado correctamente los bancos
+ERROR   2018-04-06 11:09:02,142 [http-nio-8080-exec-3] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:12:08,943 [http-nio-8080-exec-1] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:12:10,216 [http-nio-8080-exec-2] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:12:11,117 [http-nio-8080-exec-3] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:13:03,885 [http-nio-8080-exec-5] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:13:41,965 [http-nio-8080-exec-7] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+INFO    2018-04-06 11:13:49,699 [http-nio-8080-exec-8] com.gfi.chequera.controller.BancoCRUDController  - Se a listado correctamente los bancos
+INFO    2018-04-06 11:14:05,772 [http-nio-8080-exec-10] com.gfi.chequera.controller.BancoCRUDController  - Se a listado correctamente los bancos
+ERROR   2018-04-06 11:15:04,307 [http-nio-8080-exec-3] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:15:05,653 [http-nio-8080-exec-4] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:15:06,477 [http-nio-8080-exec-5] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:15:57,499 [http-nio-8080-exec-7] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:30:14,520 [http-nio-8080-exec-1] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:32:58,130 [http-nio-8080-exec-3] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:33:40,078 [http-nio-8080-exec-5] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:35:43,430 [http-nio-8080-exec-2] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:35:46,735 [http-nio-8080-exec-3] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:35:48,435 [http-nio-8080-exec-4] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+ERROR   2018-04-06 11:37:50,377 [http-nio-8080-exec-10] com.gfi.chequera.controller.BancoCRUDController  - Se encontro un error
+INFO    2018-04-07 13:30:48,230 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:33:15,191 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:36:39,014 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:40:36,437 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:40:37,212 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:40:37,456 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:40:37,690 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:40:37,915 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:41:46,537 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:41:54,199 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:43:02,576 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:43:11,963 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:44:35,294 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:46:33,656 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:48:01,620 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:48:57,806 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:49:27,038 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:50:25,078 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:53:42,773 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:53:55,107 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:53:58,202 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:54:16,039 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:54:49,116 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:57:16,017 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:57:35,447 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:57:55,636 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 13:58:19,051 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:00:43,940 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:00:44,873 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:02:33,411 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:02:54,035 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:04:26,660 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:06:14,396 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:09:12,072 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:10:24,844 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:27:47,779 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:29:05,376 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:31:53,050 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:32:17,822 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:32:19,491 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:32:36,060 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:32:47,170 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:33:50,375 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:34:49,188 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:35:36,614 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:36:26,251 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:39:41,257 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:50:21,007 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:51:25,060 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:52:30,774 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:53:11,953 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:53:28,473 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 14:55:01,884 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:25:10,802 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:25:46,138 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:27:45,465 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:29:12,167 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:30:33,570 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:32:14,466 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:32:29,535 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:32:54,687 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:38:06,402 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:38:36,073 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:40:36,017 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:41:06,070 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 15:59:49,614 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+ERROR   2018-04-07 16:21:22,937 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se encontro un error
+INFO    2018-04-07 16:23:23,975 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 16:24:03,105 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 16:42:07,812 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 16:44:41,099 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 16:45:08,945 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:04:37,422 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:07:59,577 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:12:42,998 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:13:00,268 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:14:06,805 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:14:10,335 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:16:31,941 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:17:16,030 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:17:25,386 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:17:50,669 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:18:44,609 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:18:58,612 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:22:28,981 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:24:05,091 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:24:56,428 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:43:08,090 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:43:50,282 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:44:50,147 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:46:43,932 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:46:58,213 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:47:37,249 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:51:44,831 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:52:18,054 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:52:32,285 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 17:52:57,642 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 18:31:08,677 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 18:47:44,499 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 18:53:41,987 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 18:53:47,549 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 18:55:51,479 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 18:56:54,039 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 18:57:36,513 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 18:57:52,135 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 18:58:42,813 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 18:59:14,113 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 19:05:40,830 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 19:06:20,595 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+ERROR   2018-04-07 19:21:26,032 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se encontro un error
+INFO    2018-04-07 19:27:44,167 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 19:31:06,087 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 19:31:17,438 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 19:31:33,118 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=6, bDireccion=re, bSucursal=rre, bNombre=H, bTelefono=444, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 19:34:42,449 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=6, bDireccion=re, bSucursal=rre, bNombre=H, bTelefono=444, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 19:40:54,526 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=6, bDireccion=re, bSucursal=mexico, bNombre=H, bTelefono=4444, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 19:41:10,507 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=6, bDireccion=re, bSucursal=mexico, bNombre=H, bTelefono=4444, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 19:41:23,016 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=6, bDireccion=re, bSucursal=4444, bNombre=H, bTelefono=ttt, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 19:41:50,890 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 19:42:00,635 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=10, bDireccion=Tuberos 12 San Pedrito, bSucursal=444, bNombre=Rolando Castillo Martinez, bTelefono=4425226986, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 19:43:02,500 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=10, bDireccion=Tuberos 12 San Pedrito, bSucursal=4425226986, bNombre=Rolando Castillo Martinez, bTelefono=r, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 19:55:23,419 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:01:51,018 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:05:29,645 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:05:33,809 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:06:19,617 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:06:20,795 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:06:32,725 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:06:53,271 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:09:31,739 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:12:28,805 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:16:43,231 [http-nio-127.0.0.1-9000-exec-2] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:17:16,081 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:17:43,275 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:19:24,347 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=0, bDireccion=te cabe, bSucursal=save, bNombre=buevo, bTelefono=45, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 20:23:57,759 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 20:24:09,403 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:44:25,707 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:45:17,866 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:45:43,934 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:45:59,663 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:46:07,623 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:46:51,508 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:46:53,932 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:47:10,148 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:47:12,573 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:47:54,811 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:48:04,727 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:48:14,897 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:48:21,624 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 21:50:52,412 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 23:02:48,193 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 23:03:18,901 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=0, bDireccion=sdff, bSucursal=dsd, bNombre=bbva, bTelefono=45, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 23:04:05,007 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=11, bDireccion=te cabe, bSucursal=save, bNombre=otro cambio, bTelefono=45, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 23:07:20,845 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=0, bDireccion=aaaaaaaaa, bSucursal=aaaaaaaaaaa, bNombre=aaaaaaaaa, bTelefono=5646, bStatus=false, chequeraModel=[]]
+INFO    2018-04-07 23:07:28,047 [http-nio-127.0.0.1-9000-exec-4] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-07 23:07:41,086 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=13, bDireccion=aaaaaaaaa, bSucursal=aaaaaaaaaaa, bNombre=fff, bTelefono=5646, bStatus=false, chequeraModel=[]]
+INFO    2018-04-08 00:46:45,358 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.ClienteController  - ClientesModel [idCliente=1, cNombre=Rolando Castillo papu, cDireccion=s/n, cRfc=5458745585, cRazon=fisica, cCorreo=castillor493@gmail.com, cStatus=true, chequeraModel=[]]
+INFO    2018-04-08 00:50:10,845 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.ClienteController  - ClientesModel [idCliente=1, cNombre=Rolando Castillo papu, cDireccion=s/n, cRfc=5458745585, cRazon=fisica, cCorreo=castillor493@gmail.com, cStatus=true, chequeraModel=[]]
+INFO    2018-04-08 00:52:39,207 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.ClienteController  - ClientesModel [idCliente=0, cNombre=nuevo, cDireccion=fwefe, cRfc=dfsfd, cRazon=4f, cCorreo=ff, cStatus=false, chequeraModel=[]]
+INFO    2018-04-08 00:54:06,782 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.ClienteController  - ClientesModel [idCliente=14, cNombre=rosado, cDireccion=fwefe, cRfc=dfsfd, cRazon=4f, cCorreo=ff, cStatus=false, chequeraModel=[]]
+INFO    2018-04-08 02:02:00,973 [http-nio-127.0.0.1-9000-exec-7] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-08 02:02:22,100 [http-nio-127.0.0.1-9000-exec-8] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=0, bDireccion=gf, bSucursal=fg, bNombre=fd, bTelefono=4455, bStatus=false, chequeraModel=[]]
+INFO    2018-04-08 02:02:28,360 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-08 02:02:42,620 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=0, bDireccion=tr, bSucursal=r, bNombre=rt, bTelefono=5455, bStatus=false, chequeraModel=[]]
+INFO    2018-04-08 02:02:46,723 [http-nio-127.0.0.1-9000-exec-6] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-08 02:04:40,927 [http-nio-127.0.0.1-9000-exec-1] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-08 02:04:49,762 [http-nio-127.0.0.1-9000-exec-5] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+INFO    2018-04-08 02:05:13,055 [http-nio-127.0.0.1-9000-exec-9] com.gfi.chequera.controller.BancoController  - BancosModel [idBancos=12, bDireccion=sdff, bSucursal=dsd, bNombre=bbva, bTelefono=45555, bStatus=false, chequeraModel=[]]
+INFO    2018-04-08 02:05:13,071 [http-nio-127.0.0.1-9000-exec-10] com.gfi.chequera.controller.BancoController  - Se a listado correctamente los bancos
+ERROR   2018-04-08 02:13:59,046 [http-nio-127.0.0.1-9000-exec-3] com.gfi.chequera.controller.BancoController  - Se encontro un error
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:202)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:377)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:317)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:62)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:351)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1188)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:870)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:855)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)

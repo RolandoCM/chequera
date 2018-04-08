@@ -27,6 +27,7 @@ public class TipoMovimientoConverter {
 	/*converter tipoMovimiento entity to model*/
 	public Tipo_Movimiento tipoMovimientoToEntity(Tipo_MovimientosModel tipoMovimientoModel) {
 		Tipo_Movimiento tipoMovimiento = new Tipo_Movimiento();
+		tipoMovimiento.setIdTipoMovimiento(tipoMovimiento.getIdTipoMovimiento());
 		tipoMovimiento.setTmDescripcion(tipoMovimientoModel.getTmDescripcion());
 		return tipoMovimiento;
 	}

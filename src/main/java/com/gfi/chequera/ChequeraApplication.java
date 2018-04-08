@@ -8,5 +8,6 @@ public class ChequeraApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ChequeraApplication.class, args);
+		
 	}
 }

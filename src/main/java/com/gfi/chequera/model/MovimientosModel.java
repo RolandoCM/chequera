@@ -18,13 +18,13 @@ public class MovimientosModel {
 	private String mConcepto;
 	
 	private ChequeraModel chequera;
-	private Tipo_MovimientosModel tipo_movimiento;
+	private Tipo_MovimientosModel tipoMovimiento;
 	public MovimientosModel() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public MovimientosModel(int idMovimiento, DateTime mFecha, float mMonto, String mStatus, String mConcepto,
-			ChequeraModel chequera, Tipo_MovimientosModel tipo_movimiento) {
+			ChequeraModel chequera, Tipo_MovimientosModel tipoMovimiento) {
 		super();
 		this.idMovimiento = idMovimiento;
 		this.mFecha = mFecha;
@@ -32,7 +32,7 @@ public class MovimientosModel {
 		this.mStatus = mStatus;
 		this.mConcepto = mConcepto;
 		this.chequera = chequera;
-		this.tipo_movimiento = tipo_movimiento;
+		this.tipoMovimiento = tipoMovimiento;
 	}
 	public int getIdMovimiento() {
 		return idMovimiento;
@@ -70,16 +70,17 @@ public class MovimientosModel {
 	public void setChequera(ChequeraModel chequera) {
 		this.chequera = chequera;
 	}
-	public Tipo_MovimientosModel getTipo_movimiento() {
-		return tipo_movimiento;
+	
+	public Tipo_MovimientosModel getTipoMovimiento() {
+		return tipoMovimiento;
 	}
-	public void setTipo_movimiento(Tipo_MovimientosModel tipo_movimiento) {
-		this.tipo_movimiento = tipo_movimiento;
+	public void setTipoMovimiento(Tipo_MovimientosModel tipoMovimiento) {
+		this.tipoMovimiento = tipoMovimiento;
 	}
 	@Override
 	public String toString() {
 		return "MovimientosModel [idMovimiento=" + idMovimiento + ", mFecha=" + mFecha + ", mMonto=" + mMonto
 				+ ", mStatus=" + mStatus + ", mConcepto=" + mConcepto + ", chequera=" + chequera + ", tipo_movimiento="
-				+ tipo_movimiento + "]";
+				+ tipoMovimiento + "]";
 	}
 }

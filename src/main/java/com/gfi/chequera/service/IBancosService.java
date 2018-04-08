@@ -5,7 +5,6 @@ package com.gfi.chequera.service;
 
 import java.util.List;
 
-
 import com.gfi.chequera.model.BancosModel;
 
 /**
@@ -19,4 +18,5 @@ public interface IBancosService {
 	public List<BancosModel> listBancos();
 	public void updateBanco(BancosModel bancoModel);
 	public boolean deleteBanco(int idBanco);
+	public BancosModel searchBanco(int idBanco);
 }

@@ -32,6 +32,7 @@ public class Movimientos {
 	private Chequera chequera;
 	@OneToOne
 	private Tipo_Movimiento tipoMovimiento;
+	
 	public Movimientos() {
 		super();
 		// TODO Auto-generated constructor stub

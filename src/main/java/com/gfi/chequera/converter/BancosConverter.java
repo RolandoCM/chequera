@@ -32,7 +32,8 @@ public class BancosConverter {
 		Bancos banco = new Bancos();
 		banco.setbNombre(bancoModel.getbNombre());
 		banco.setbDireccion(bancoModel.getbDireccion());
-		banco.setbSucursal(bancoModel.getbTelefono());
+		banco.setbSucursal(bancoModel.getbSucursal());
+		banco.setbTelefono(bancoModel.getbTelefono());
 		banco.setbStatus(bancoModel.isbStatus());
 		return banco;
 	}

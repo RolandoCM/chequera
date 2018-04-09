@@ -30,10 +30,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col s12 m12 l12">
-						<h5 class="breadcrumbs-title">Clientes</h5>
+						<h5 class="breadcrumbs-title">Chequera</h5>
 						<ol class="breadcrumbs">
-							<li><a th:href="index.html">Inicio</a></li>
-							<li><a th:href="@{/cliente/listar}">Clientes</a></li>
+							<li><a th:href="@{/inicio}">Inicio</a></li>
+							<li><a th:href="@{/chequera/listar}">Chequera</a></li>
 							<li class="active">Lista</li>
 						</ol>
 					</div>
@@ -49,8 +49,8 @@
 
 				<div class="divider"></div>
 				<div class="col s12 m8 l9">
-					<a class="waves-effect waves-light  btn" th:href="@{/cliente/form}">Nuevo
-						Cliente</a>
+					<a class="waves-effect waves-light  btn"
+						th:href="@{/chequera/form}">Nueva Chequera</a>
 					<!-- <a class="waves-effect waves-light  btn"><i class="mdi-action-3d-rotation left"></i>button</a>
                       <a class="waves-effect waves-light  btn"><i class="mdi-action-backup right"></i>button</a>
 
@@ -72,11 +72,16 @@
 								th:cellspacing="0">
 								<thead>
 									<tr>
-										<th>Nombre</th>
-										<th>Dirección</th>
-										<th>RFC</th>
-										<th>Rason Social</th>
-										<th>Correo</th>
+										<th>No.</th>
+										<th>Banco</th>
+										<th>Cliente</th>
+										<th>Fecha Contrato</th>
+										<th>Clave bancaria</th>
+										<th>No. Cuenta</th>
+										<th>Saldo</th>
+										<th>Abonos</th>
+										<th>Cargos</th>
+										<th>Fecha Corte</th>
 										<th>Status</th>
 										<th>Opciones</th>
 									</tr>
@@ -84,32 +89,44 @@
 
 								<tfoot>
 									<tr>
-										<th>Nombre</th>
-										<th>Dirección</th>
-										<th>RFC</th>
-										<th>Rason Social</th>
-										<th>Correo</th>
+										<th>No.</th>
+										<th>Banco</th>
+										<th>Cliente</th>
+										<th>Fecha Contrato</th>
+										<th>Clave bancaria</th>
+										<th>No. Cuenta</th>
+										<th>Saldo</th>
+										<th>Abonos</th>
+										<th>Cargos</th>
+										<th>Fecha Corte</th>
 										<th>Status</th>
 										<th>Opciones</th>
 									</tr>
 								</tfoot>
 
 								<tbody>
-									<tr th:each="cliente : ${clientes}">
-										<td th:text="${cliente.cNombre}"></td>
-										<td th:text="${cliente.cDireccion}"></td>
-										<td th:text="${cliente.cRfc}"></td>
-										<td th:text="${cliente.cRazon}"></td>
-										<td th:text="${cliente.cCorreo}"></td>
-										<td th:text="${cliente.cStatus}"></td>
-										<td><div class="col s12 m4 center">
+									<tr th:each="chequera : ${chequeras}">
+										<td th:text="${chequera.idChequera}"></td>
+										<td th:text="${chequera.banco.bNombre}"></td>
+										<td th:text="${chequera.cliente.cNombre}"></td>
+										<td th:text="${chequera.chFecha}"></td>
+										<td th:text="${chequera.chClaveInterbancaria}"></td>
+										<td th:text="${chequera.chNumCuenta}"></td>
+										<td th:text="'$ '+${chequera.chSaldo}"></td>
+										<td th:text="${chequera.chAbonos}"></td>
+										<td th:text="${chequera.chCargos}"></td>
+										<td th:text="${chequera.chFechaCorte}"></td>
+										<td th:text="${chequera.chStatus}"></td>
+										<td><div th:if="${chequera.chStatus}==true" class="col s12 m4 center">
 												<a class="btn-floating btn-large waves-effect waves-light "
-													th:href="@{/cliente/formupdate(idCliente=${cliente.idCliente})}"><i
+													th:href="@{/chequera/formupdate(idChequera=${chequera.idChequera})}"><i
 													class="mdi-content-forward"></i></a> <a
-													th:href=@{/cliente/delete(idCliente=${cliente.idCliente})}
+													th:href=@{/chequera/delete(idChequera=${chequera.idChequera})}
 													class="btn-floating waves-effect waves-light "><i
 													class="mdi-content-clear"></i></a>
 											</div>
+											<div th:if="${chequera.chStatus}==false" class="col s12 m4 center">
+											<a class="btn-floating btn-large waves-effect waves-light"><i class="mdi-action-https center"></i></a></div>
 											</td>
 									</tr>
 								</tbody>
@@ -119,20 +136,21 @@
 				</div>
 			</div>
 		</div>
-		</div>
+	</div>
 
-		<!-- START FOOTER -->
-		<footer class="page-footer">
-			<div class="footer-copyright">
-				<div class="container">
-					<span>Copyright © 2018 <a class="grey-text text-lighten-4"
-						href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
-						target="_blank">Rolando Castillo</a> All rights reserved.
-					</span> <span class="right"> Design and Developed by <a
-						class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando Castillo</a></span>
-				</div>
+	<!-- START FOOTER -->
+	<footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container">
+				<span>Copyright © 2018 <a class="grey-text text-lighten-4"
+					href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
+					target="_blank">Rolando Castillo</a> All rights reserved.
+				</span> <span class="right"> Design and Developed by <a
+					class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando
+						Castillo</a></span>
 			</div>
-		</footer>
+		</div>
+	</footer>
 </body>
 
 </html>

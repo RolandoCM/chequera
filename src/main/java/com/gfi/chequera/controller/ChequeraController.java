@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.gfi.chequera.model.ChequeraModel;
+import com.gfi.chequera.service.IBancosService;
 import com.gfi.chequera.service.IChequeraService;
 import com.gfi.chequera.utils.ConstantView;
 
@@ -29,6 +30,8 @@ import com.gfi.chequera.utils.ConstantView;
 public class ChequeraController {
 	@Autowired
 	private IChequeraService chequeraService;
+	@Autowired
+	private IBancosService bancoService;
 	
 	private final static Logger LOG = Logger.getLogger(ChequeraController.class);
 	
@@ -46,20 +49,21 @@ public class ChequeraController {
 	}
 	@PostMapping("/add")
 	public String addCliente(@ModelAttribute(name="chequera") ChequeraModel chequeraModel) {
-		chequeraService.saveChequera(chequeraModel);
 		LOG.info(chequeraModel.toString());
+		chequeraService.saveChequera(chequeraModel);
 		return "redirect:/chequera/listar";
 	}
 	@GetMapping("/form")
 	public ModelAndView formCliente() {
-		ModelAndView mav = new ModelAndView(ConstantView.FORM_CLIENTE);
+		ModelAndView mav = new ModelAndView(ConstantView.FORM_CHEQUERA);
 		ChequeraModel chequera = new ChequeraModel();
 		mav.addObject("chequera", chequera);
+		mav.addObject("bancos", bancoService.listBancos());
 		return mav;
 	}
 	@GetMapping("/formupdate")
 	public ModelAndView formUpdate(@RequestParam(name="idChequera", required=true) int idChequera) {
-		ModelAndView mav = new ModelAndView(ConstantView.FORM_CLIENTE);
+		ModelAndView mav = new ModelAndView(ConstantView.FORM_CHEQUERA);
 		ChequeraModel chequera = chequeraService.seachChequera(idChequera);
 		mav.addObject("chequera", chequera);
 		return mav;

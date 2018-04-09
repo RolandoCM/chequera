@@ -3,7 +3,8 @@
  */
 package com.gfi.chequera.model;
 
-import org.joda.time.DateTime;
+import java.time.LocalDateTime;
+
 
 /**
  * @author Rolando Castillo
@@ -12,10 +13,11 @@ import org.joda.time.DateTime;
  */
 public class MovimientosModel {
 	private int idMovimiento;
-	private DateTime mFecha;
+	private String mFecha;
 	private float mMonto;
 	private String mStatus;
 	private String mConcepto;
+	private int idChequera;
 	
 	private ChequeraModel chequera;
 	private Tipo_MovimientosModel tipoMovimiento;
@@ -23,7 +25,7 @@ public class MovimientosModel {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public MovimientosModel(int idMovimiento, DateTime mFecha, float mMonto, String mStatus, String mConcepto,
+	public MovimientosModel(int idMovimiento, String mFecha, float mMonto, String mStatus, String mConcepto,
 			ChequeraModel chequera, Tipo_MovimientosModel tipoMovimiento) {
 		super();
 		this.idMovimiento = idMovimiento;
@@ -40,10 +42,10 @@ public class MovimientosModel {
 	public void setIdMovimiento(int idMovimiento) {
 		this.idMovimiento = idMovimiento;
 	}
-	public DateTime getmFecha() {
+	public String getmFecha() {
 		return mFecha;
 	}
-	public void setmFecha(DateTime mFecha) {
+	public void setmFecha(String mFecha) {
 		this.mFecha = mFecha;
 	}
 	public float getmMonto() {
@@ -76,6 +78,13 @@ public class MovimientosModel {
 	}
 	public void setTipoMovimiento(Tipo_MovimientosModel tipoMovimiento) {
 		this.tipoMovimiento = tipoMovimiento;
+	}
+	
+	public int getIdChequera() {
+		return idChequera;
+	}
+	public void setIdChequera(int idChequera) {
+		this.idChequera = idChequera;
 	}
 	@Override
 	public String toString() {

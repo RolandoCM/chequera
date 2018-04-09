@@ -76,7 +76,7 @@
                                 <ul>
                                     <li><a th:href="@{/cliente/listar}">Cliente</a>
                                     </li>
-                                    <li><a th:href="layout-horizontal-menu.html">Chequera</a>
+                                    <li><a th:href="@{/chequera/listar}">Chequera</a>
                                     </li>
                                     <li><a th:href="@{/bancos/listar}">Banco</a></li>
                                 </ul>
@@ -89,11 +89,11 @@
                         <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-view-carousel"></i>Operaciones</a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a th:href="layout-fullscreen.html">Deposito</a>
+                                    <li><a th:href="@{/movimientos/chequeras}">Deposito</a>
                                     </li>
-                                    <li><a th:href="layout-horizontal-menu.html">Retiro</a>
+                                    <li><a th:href="@{/movimientos/chequeras}">Retiro</a>
                                     </li>
-                                    <li><a th:href="@{/bancos/listar}">Otros</a></li>
+                                    <li><a th:href="@{/movimientos/chequeras}">Otros</a></li>
                                 </ul>
                             </div>
                         </li>

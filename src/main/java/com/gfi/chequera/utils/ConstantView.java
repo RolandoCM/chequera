@@ -23,4 +23,8 @@ public class ConstantView {
 	/*Constantes para Chequera*/
 	public final static String LISTA_CHEQUERAS = "chequera/listChequera";
 	public final static String FORM_CHEQUERA = "chequera/formChequera";
+	
+	/*Constantes para movimientos*/
+	public final static String LISTA_CHEQUERAS_MOVIMIENTOS ="operaciones/chequeraOperaciones";
+	public final static String FORM_MOVIMIENTO = "operaciones/formMovimiento";
 }

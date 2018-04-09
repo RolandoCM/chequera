@@ -99,7 +99,8 @@
 										<td th:text="${banco.bSucursal}"></td>
 										<td th:text="${banco.bTelefono}"></td>
 										<td th:text="${banco.bStatus}"></td>
-										<td><div class="col s12 m4 center">
+										<td><div th:if="${banco.bStatus}==true"
+												class="col s12 m4 center">
 												<a class="btn-floating btn-large waves-effect waves-light "
 													th:href="@{/bancos/formupdate(idBanco=${banco.idBancos})}"><i
 													class="mdi-content-forward"></i></a> <a
@@ -107,7 +108,12 @@
 													class="btn-floating waves-effect waves-light "><i
 													class="mdi-content-clear"></i></a>
 											</div>
-											</td>
+											<div th:if="${banco.bStatus}==false"
+												class="col s12 m4 center">
+												<a class="btn-floating btn-large waves-effect waves-light"><i
+													class="mdi-action-https center"></i></a>
+											</div></td>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -125,7 +131,8 @@
 						href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
 						target="_blank">Rolando Castillo</a> All rights reserved.
 					</span> <span class="right"> Design and Developed by <a
-						class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando Castillo</a></span>
+						class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando
+							Castillo</a></span>
 				</div>
 			</div>
 		</footer>

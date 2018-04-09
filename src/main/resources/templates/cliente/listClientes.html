@@ -102,7 +102,8 @@
 										<td th:text="${cliente.cRazon}"></td>
 										<td th:text="${cliente.cCorreo}"></td>
 										<td th:text="${cliente.cStatus}"></td>
-										<td><div class="col s12 m4 center">
+										<td><div th:if="${cliente.cStatus}==true"
+												class="col s12 m4 center">
 												<a class="btn-floating btn-large waves-effect waves-light "
 													th:href="@{/cliente/formupdate(idCliente=${cliente.idCliente})}"><i
 													class="mdi-content-forward"></i></a> <a
@@ -110,7 +111,11 @@
 													class="btn-floating waves-effect waves-light "><i
 													class="mdi-content-clear"></i></a>
 											</div>
-											</td>
+											<div th:if="${cliente.cStatus}==false"
+												class="col s12 m4 center">
+												<a class="btn-floating btn-large waves-effect waves-light"><i
+													class="mdi-action-https center"></i></a>
+											</div></td>
 									</tr>
 								</tbody>
 							</table>
@@ -119,20 +124,21 @@
 				</div>
 			</div>
 		</div>
-		</div>
+	</div>
 
-		<!-- START FOOTER -->
-		<footer class="page-footer">
-			<div class="footer-copyright">
-				<div class="container">
-					<span>Copyright © 2018 <a class="grey-text text-lighten-4"
-						href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
-						target="_blank">Rolando Castillo</a> All rights reserved.
-					</span> <span class="right"> Design and Developed by <a
-						class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando Castillo</a></span>
-				</div>
+	<!-- START FOOTER -->
+	<footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container">
+				<span>Copyright © 2018 <a class="grey-text text-lighten-4"
+					href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
+					target="_blank">Rolando Castillo</a> All rights reserved.
+				</span> <span class="right"> Design and Developed by <a
+					class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando
+						Castillo</a></span>
 			</div>
-		</footer>
+		</div>
+	</footer>
 </body>
 
 </html>

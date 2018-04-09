@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<title>Nuevo Cliente</title>
+<style type="text/css">
+.input-field div.error {
+	position: relative;
+	top: -1rem;
+	left: 0rem;
+	font-size: 0.8rem;
+	color: #FF4081;
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+.input-field label.active {
+	width: 100%;
+}
+
+.left-alert input[type=text]+label:after, .left-alert input[type=password]+label:after,
+	.left-alert input[type=email]+label:after, .left-alert input[type=url]+label:after,
+	.left-alert input[type=time]+label:after, .left-alert input[type=date]+label:after,
+	.left-alert input[type=datetime-local]+label:after, .left-alert input[type=tel]+label:after,
+	.left-alert input[type=number]+label:after, .left-alert input[type=search]+label:after,
+	.left-alert textarea.materialize-textarea+label:after {
+	left: 0px;
+}
+
+.right-alert input[type=text]+label:after, .right-alert input[type=password]+label:after,
+	.right-alert input[type=email]+label:after, .right-alert input[type=url]+label:after,
+	.right-alert input[type=time]+label:after, .right-alert input[type=date]+label:after,
+	.right-alert input[type=datetime-local]+label:after, .right-alert input[type=tel]+label:after,
+	.right-alert input[type=number]+label:after, .right-alert input[type=search]+label:after,
+	.right-alert textarea.materialize-textarea+label:after {
+	right: 70px;
+}
+</style>
+</head>
+
+<body>
+	<section th:include="menu.html"></section>
+	<!-- START MAIN -->
+	<div id="main">
+		<!-- START WRAPPER -->
+		<div class="wrapper">
+
+			<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+			<!-- START CONTENT -->
+			<section id="content">
+
+				<!--breadcrumbs start-->
+				<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+					<!-- Search for small screen -->
+					<div class="header-search-wrapper grey hide-on-large-only">
+						<i class="mdi-action-search active"></i> <input type="text"
+							name="Search" class="header-search-input z-depth-2"
+							placeholder="Explore Materialize">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col s12 m12 l12">
+								<h5 class="breadcrumbs-title">Registro Cliente</h5>
+								<ol class="breadcrumbs">
+									<li><a th:href="index.html">Inicio</a></li>
+									<li><a th:href="@{/cliente/listar}">Cliente</a></li>
+									<li class="active">Registro Cliente</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--breadcrumbs end-->
+
+
+				<!--start container-->
+				<div class="container">
+
+					<!--
+              jQuery Validation Plugin
+          -->
+					<p class="caption">Clientes</p>
+					<p>
+						<a href="#" target="_blank">Politicas de Seguridad</a> Es
+						necesario la validación oficial de cambios o nuevos bancos.
+					</p>
+					<div class="divider"></div>
+					<!--jqueryvalidation-->
+					<div id="jqueryvalidation" class="section">
+						<div class="row">
+							<div class="col s12 m12 l12">
+								<div class="col s12 m12 l6">
+									<div class="card-panel">
+										<h4 class="header2">Registro de Cliente</h4>
+										<div class="row">
+											<form class="formValidate" id="formCliente" action="#"
+												th:action="@{/cliente/add}" th:object="${cliente}"
+												method="POST">
+												<div class="row">
+													<div class="input-field col s12">
+														<label for="nameCliente">Nombre del Cliente *</label> <input th:field="*{cNombre}" th:value="${cNombre}"
+															id="nameCliente" name="nameCliente" type="text"
+															data-error=".errorTxt1"/>
+														<div class="errorTxt1"></div>
+													</div>
+													<div class="input-field col s12">
+														<label for="rfc">RFC *</label> <input th:field="*{cRfc}" th:value="${cRfc}"
+															id="direccion" name="direccion" type="text"
+															data-error=".errorTxt1"/>
+														<div class="errorTxt1"></div>
+													</div>
+													<div class="input-field col s12">
+														<label for="addres">Dirección *</label> <input th:field="*{cDireccion}" th:value="${cDireccion}"
+															id="address" name="address" type="text"
+															data-error=".errorTxt1"/>
+														<div class="errorTxt1"></div>
+													</div>
+													<div class="input-field col s12">
+														<label for="razon">Razón Social *</label> <input th:field="*{cRazon}" th:value="${cRazon}"
+															id="razon" name="razon" type="text"
+															data-error=".errorTxt1"/>
+														<div class="errorTxt1"></div>
+													</div>
+													<div class="input-field col s12">
+														<label for="correo">Correo *</label> <input th:field="*{cCorreo}" th:value="${cCorreo}"
+															id="correo" name="correo" type="text"
+															data-error=".errorTxt1"/>
+														<div class="errorTxt1"></div>
+													</div>
+																									
+													<input type="hidden" id="status" value=true th:value=1 th:field="*{cStatus}" class="invisible"/>
+													<input type="hidden" id="idCliente" th:value="${idCliente}" th:field="*{idCliente}" class="invisible"/>
+													
+													<div class="input-field col s12">
+														<button class="btn waves-effect waves-light right submit"
+															type="submit" name="action">
+															Submit <i class="mdi-content-send right"></i>
+														</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END WRAPPER -->
+			</section>
+		</div>
+	</div>
+	<!-- END MAIN -->
+	<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+	<!-- START FOOTER -->
+	<footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container">
+				<span>Copyright © 2018 <a class="grey-text text-lighten-4"
+					href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
+					target="_blank">Rolando Castillo</a> All rights reserved.
+				</span> <span class="right"> Design and Developed by <a
+					class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando Castillo</a></span>
+			</div>
+		</div>
+	</footer>
+	<!-- END FOOTER -->
+
+	<!-- ================================================
+    Scripts
+    ================================================ -->
+
+
+	<!-- chartist -->
+	<script type="text/javascript"
+		th:src="@{/js/plugins/jquery-validation/jquery.validate.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/js/plugins/jquery-validation/additional-methods.min.js}"></script>
+
+	<script type="text/javascript">
+		$("#formValidate").validate({
+			rules : {
+				uname : {
+					required : true,
+					minlength : 5
+				},
+				cemail : {
+					required : true,
+					email : true
+				},
+				password : {
+					required : true,
+					minlength : 5
+				},
+				cpassword : {
+					required : true,
+					minlength : 5,
+					equalTo : "#password"
+				},
+				curl : {
+					required : true,
+					url : true
+				},
+				crole : "required",
+				ccomment : {
+					required : true,
+					minlength : 15
+				},
+				cgender : "required",
+				cagree : "required",
+			},
+			//For custom messages
+			messages : {
+				uname : {
+					required : "Enter a username",
+					minlength : "Enter at least 5 characters"
+				},
+				curl : "Enter your website",
+			},
+			errorElement : 'div',
+			errorPlacement : function(error, element) {
+				var placement = $(element).data('error');
+				if (placement) {
+					$(placement).append(error)
+				} else {
+					error.insertAfter(element);
+				}
+			}
+		});
+	</script>
+
+</body>
+
+</html>

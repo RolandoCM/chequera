@@ -3,6 +3,8 @@
  */
 package com.gfi.chequera.entity;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -11,7 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import org.joda.time.DateTime;
 
 /**
  * @author Rolando Castillo
@@ -23,7 +24,7 @@ public class Movimientos {
 	@Id
 	@GeneratedValue
 	private int idMovimientos;
-	private DateTime mFecha;
+	private LocalDateTime mFecha;
 	private float mMonto;
 	private String mStatus;
 	private String mConcepto;
@@ -37,7 +38,7 @@ public class Movimientos {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Movimientos(int idMovimientos, DateTime mFecha, float mMonto, String mStatus, String mConcepto,
+	public Movimientos(int idMovimientos, LocalDateTime mFecha, float mMonto, String mStatus, String mConcepto,
 			Chequera chequera, Tipo_Movimiento tipoMovimiento) {
 		super();
 		this.idMovimientos = idMovimientos;
@@ -54,10 +55,10 @@ public class Movimientos {
 	public void setIdMovimientos(int idMovimientos) {
 		this.idMovimientos = idMovimientos;
 	}
-	public DateTime getmFecha() {
+	public LocalDateTime getmFecha() {
 		return mFecha;
 	}
-	public void setmFecha(DateTime mFecha) {
+	public void setmFecha(LocalDateTime mFecha) {
 		this.mFecha = mFecha;
 	}
 	public float getmMonto() {

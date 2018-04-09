@@ -13,7 +13,9 @@ import com.gfi.chequera.converter.ChequeraConverter;
 import com.gfi.chequera.entity.Chequera;
 import com.gfi.chequera.model.ChequeraModel;
 import com.gfi.chequera.repository.ChequeraRepository;
+import com.gfi.chequera.repository.ClientesRepository;
 import com.gfi.chequera.service.IChequeraService;
+import com.gfi.chequera.utils.CalcularDatosUnicosCuenta;
 
 /**
  * @author Rolando Castillo
@@ -26,6 +28,8 @@ public class ChequeraService implements IChequeraService{
 	private ChequeraRepository chequeraRepository;
 	@Autowired
 	private ChequeraConverter chequeraConverter;
+	@Autowired
+	private CalcularDatosUnicosCuenta calculaDatosCuenta;
 	
 	private Chequera chequera;
 	private ChequeraModel chequeraModel;
@@ -37,11 +41,16 @@ public class ChequeraService implements IChequeraService{
 		List<ChequeraModel> chequerasModel = new ArrayList<>();
 		for(Chequera chequera : chequeras)
 			chequerasModel.add(chequeraConverter.ChequeraToModel(chequera));
-		return null;
+		return chequerasModel;
 	}
 	/*Save and update chequera*/
 	@Override
 	public void saveChequera(ChequeraModel chequeraModel) {
+		/*Calcular numero unico de cuenta y clave intervancaria*/
+		String chNumCuenta = calculaDatosCuenta.calculaNumeroCuenta(chequeraModel.getIdBanco(), chequeraModel.getIdCliente());
+		chequeraModel.setChNumCuenta(chNumCuenta);
+		String chClaveInterbancaria = calculaDatosCuenta.calculaClaveIntervancaria(chNumCuenta);
+		chequeraModel.setChClaveInterbancaria(chClaveInterbancaria);
 		chequera = chequeraConverter.ChequeraToEntity(chequeraModel);
 		chequeraRepository.save(chequera);
 	}

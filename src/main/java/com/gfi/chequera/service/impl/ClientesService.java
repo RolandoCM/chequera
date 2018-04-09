@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.mail.MessagingException;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,7 @@ public class ClientesService implements IClientesService{
 	
 	private Clientes cliente;
 	private ClientesModel clienteModel;
+	private final static Logger LOG = Logger.getLogger(ClientesService.class);
 	
 	/*Retorna una lista de todos los clientes encontrados en la base de datos*/
 	@Override
@@ -58,6 +60,7 @@ public class ClientesService implements IClientesService{
 		try {
 			sendMailService.sendMailMessage(mail);
 		} catch (MessagingException e) {
+			LOG.error("Error en el envio del correo", e);
 			e.printStackTrace();
 		}
 	}

@@ -3,6 +3,7 @@
  */
 package com.gfi.chequera.entity;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,7 +16,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.joda.time.DateTime;
 
 /**
  * @author Rolando Castillo
@@ -27,7 +27,7 @@ public class Chequera {
 	@Id
 	@GeneratedValue
 	private int idChequera;
-	private DateTime chFecha;
+	private LocalDateTime chFecha;
 	private String chClaveInterbancaria;
 	private String chNumCuenta;
 	private String chSaldo;
@@ -50,7 +50,7 @@ public class Chequera {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Chequera(int idChequera, DateTime chFecha, String chClaveInterbancaria, String chNumCuenta, String chSaldo,
+	public Chequera(int idChequera, LocalDateTime chFecha, String chClaveInterbancaria, String chNumCuenta, String chSaldo,
 			String chAbonos, String chCargos, boolean chStatus, String chFechaCorte, Bancos banco, Clientes cliente) {
 		super();
 		this.idChequera = idChequera;
@@ -74,11 +74,11 @@ public class Chequera {
 		this.idChequera = idChequera;
 	}
 
-	public DateTime getChFecha() {
+	public LocalDateTime getChFecha() {
 		return chFecha;
 	}
 
-	public void setChFecha(DateTime chFecha) {
+	public void setChFecha(LocalDateTime chFecha) {
 		this.chFecha = chFecha;
 	}
 

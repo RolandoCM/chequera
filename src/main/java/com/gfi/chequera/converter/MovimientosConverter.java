@@ -3,6 +3,9 @@
  */
 package com.gfi.chequera.converter;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -31,10 +34,11 @@ public class MovimientosConverter {
 		
 		Chequera chequera = chequeraConverter.ChequeraToEntity(movimientoModel.getChequera());
 		Tipo_Movimiento tipoMovimiento = tipoMovimientoConverter.tipoMovimientoToEntity(movimientoModel.getTipoMovimiento());
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); //formato para fecha
 		
 		movimiento.setIdMovimientos(movimientoModel.getIdMovimiento());
 		movimiento.setmConcepto(movimientoModel.getmConcepto());
-		movimiento.setmFecha(movimientoModel.getmFecha());
+		movimiento.setmFecha(LocalDateTime.parse(movimientoModel.getmFecha(),formatter));
 		movimiento.setmMonto(movimientoModel.getmMonto());
 		movimiento.setmStatus(movimientoModel.getmStatus());
 		movimiento.setChequera(chequera);
@@ -48,10 +52,11 @@ public class MovimientosConverter {
 		ChequeraModel chequeraModel = chequeraConverter.ChequeraToModel(movimiento.getChequera());
 		Tipo_MovimientosModel tipoMovimientoModel = tipoMovimientoConverter
 				.tipoMovimientoToModel(movimiento.getTipoMovimiento());
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); //formato para fecha
 
 		movimientoModel.setIdMovimiento(movimiento.getIdMovimientos());
 		movimientoModel.setmConcepto(movimiento.getmConcepto());
-		movimientoModel.setmFecha(movimiento.getmFecha());
+		movimientoModel.setmFecha(movimiento.getmFecha().format(formatter));
 		movimientoModel.setmMonto(movimiento.getmMonto());
 		movimientoModel.setmStatus(movimiento.getmStatus());
 		movimientoModel.setChequera(chequeraModel);

@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 import com.gfi.chequera.entity.Chequera;
 import com.gfi.chequera.entity.Movimientos;
-import com.gfi.chequera.entity.Tipo_Movimiento;
 import com.gfi.chequera.model.ChequeraModel;
 import com.gfi.chequera.model.MovimientosModel;
 import com.gfi.chequera.model.Tipo_MovimientosModel;
@@ -33,7 +32,6 @@ public class MovimientosConverter {
 		Movimientos movimiento = new Movimientos();
 		
 		Chequera chequera = chequeraConverter.ChequeraToEntity(movimientoModel.getChequera());
-		Tipo_Movimiento tipoMovimiento = tipoMovimientoConverter.tipoMovimientoToEntity(movimientoModel.getTipoMovimiento());
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); //formato para fecha
 		
 		movimiento.setIdMovimientos(movimientoModel.getIdMovimiento());
@@ -42,7 +40,6 @@ public class MovimientosConverter {
 		movimiento.setmMonto(movimientoModel.getmMonto());
 		movimiento.setmStatus(movimientoModel.getmStatus());
 		movimiento.setChequera(chequera);
-		movimiento.setTipoMovimiento(tipoMovimiento);
 		return movimiento;
 	}
 

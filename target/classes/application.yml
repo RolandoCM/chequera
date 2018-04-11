@@ -12,8 +12,10 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+ 
       naming:
-        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
   
   thymeleaf:
     cache: false

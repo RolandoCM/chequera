@@ -16,4 +16,6 @@ public interface IMovimientosService {
 	public boolean deposito(MovimientosModel movimientoModel);
 	public boolean retiro(MovimientosModel movimientoModel);
 	public boolean validarRetiro(MovimientosModel movimientoModel);
+	public List<MovimientosModel> listarMovimientos();
+	public void tipoMovimiento(MovimientosModel movimientoModel);
 }

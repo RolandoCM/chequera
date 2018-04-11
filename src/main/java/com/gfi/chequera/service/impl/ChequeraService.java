@@ -13,7 +13,6 @@ import com.gfi.chequera.converter.ChequeraConverter;
 import com.gfi.chequera.entity.Chequera;
 import com.gfi.chequera.model.ChequeraModel;
 import com.gfi.chequera.repository.ChequeraRepository;
-import com.gfi.chequera.repository.ClientesRepository;
 import com.gfi.chequera.service.IChequeraService;
 import com.gfi.chequera.utils.CalcularDatosUnicosCuenta;
 
@@ -52,6 +51,8 @@ public class ChequeraService implements IChequeraService{
 		String chClaveInterbancaria = calculaDatosCuenta.calculaClaveIntervancaria(chNumCuenta);
 		chequeraModel.setChClaveInterbancaria(chClaveInterbancaria);
 		chequera = chequeraConverter.ChequeraToEntity(chequeraModel);
+		chequera.setChAbonos("0");
+		chequera.setChCargos("0");
 		chequeraRepository.save(chequera);
 	}
 

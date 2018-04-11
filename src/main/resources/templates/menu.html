@@ -46,7 +46,7 @@
                 <li class="user-details cyan darken-2">
                 <div class="row">
                     <div class="col col s4 m4 l4">
-                        <img th:src="@{mages/avatar.jpg}" alt="" class="circle responsive-img valign profile-image">
+                        <img th:src="@{mages/avatar.jpg}" alt="" class="circle responsive-img valign profile-image"/>
                     </div>
                     <div class="col col s8 m8 l8">
                         <ul id="profile-dropdown" class="dropdown-content">
@@ -84,21 +84,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-view-carousel"></i>Operaciones</a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a th:href="@{/movimientos/chequeras}">Deposito</a>
-                                    </li>
-                                    <li><a th:href="@{/movimientos/chequeras}">Retiro</a>
-                                    </li>
-                                    <li><a th:href="@{/movimientos/chequeras}">Otros</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+                 <li class="no-padding"><a th:href="@{/movimientos/chequeras}" class="waves-effect waves-cyan"><i class="mdi-action-view-carousel"></i>Operaciones</a></li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-view-carousel"></i>Consulta</a>
@@ -106,7 +92,7 @@
                                 <ul>
                                     <li><a th:href="layout-fullscreen.html">Estado de Cuenta</a>
                                     </li>
-                                    <li><a th:href="layout-horizontal-menu.html">Analisis de Saldo</a>
+                                    <li><a th:href="@{/movimientos/listar}">Analisis de Saldo</a>
                                     </li>
                                 </ul>
                             </div>

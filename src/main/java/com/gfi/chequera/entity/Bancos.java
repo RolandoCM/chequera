@@ -3,12 +3,14 @@
  */
 package com.gfi.chequera.entity;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -19,9 +21,12 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="bancos")
-public class Bancos {
+public class Bancos{
+	/**
+	 * 
+	 */
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int idBancos;
 	private String bDireccion;
 	private String bSucursal;

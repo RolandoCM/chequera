@@ -10,6 +10,7 @@ import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -25,7 +26,7 @@ import javax.persistence.Table;
 @Table(name="chequera")
 public class Chequera {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int idChequera;
 	private LocalDateTime chFecha;
 	private String chClaveInterbancaria;
@@ -42,7 +43,7 @@ public class Chequera {
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="b_id_cliente")
 	private Clientes cliente;
-	@OneToMany(fetch=FetchType.LAZY)
+	@OneToMany(fetch=FetchType.EAGER, mappedBy="chequera")
 	private Set<Movimientos> movimientos = new HashSet<>();
 	
 	public Chequera() {

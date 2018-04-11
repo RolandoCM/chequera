@@ -27,4 +27,7 @@ public class ConstantView {
 	/*Constantes para movimientos*/
 	public final static String LISTA_CHEQUERAS_MOVIMIENTOS ="operaciones/chequeraOperaciones";
 	public final static String FORM_MOVIMIENTO = "operaciones/formMovimiento";
+	
+	/*Constantes para consulta*/
+	public final static String ANALISIS_SALDO = "consulta/analisisSaldo";
 }

@@ -6,6 +6,7 @@ package com.gfi.chequera.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +14,12 @@ import com.gfi.chequera.converter.ChequeraConverter;
 import com.gfi.chequera.converter.MovimientosConverter;
 import com.gfi.chequera.entity.Chequera;
 import com.gfi.chequera.entity.Movimientos;
+import com.gfi.chequera.entity.Tipo_Movimiento;
 import com.gfi.chequera.model.ChequeraModel;
 import com.gfi.chequera.model.MovimientosModel;
 import com.gfi.chequera.repository.ChequeraRepository;
 import com.gfi.chequera.repository.MovimientosRepository;
+import com.gfi.chequera.repository.TipoMovimientoRepository;
 import com.gfi.chequera.service.IMovimientosService;
 
 /**
@@ -34,7 +37,10 @@ public class MovimientosService implements IMovimientosService{
 	private MovimientosRepository movimientoRepository;
 	@Autowired
 	private MovimientosConverter movimientoConverter;
-
+	@Autowired
+	private TipoMovimientoRepository tipoMovimientoRepository;
+	
+	private final static Logger LOG = Logger.getLogger(MovimientosService.class);
 	@Override
 	public List<ChequeraModel> listaCheuqeras() {
 		List<Chequera> chequeras = chequeraRepository.findAll();
@@ -46,30 +52,44 @@ public class MovimientosService implements IMovimientosService{
 
 	@Override
 	public boolean deposito(MovimientosModel movimientoModel) {
-		Chequera chequera = chequeraRepository.findByIdChequera(movimientoModel.getIdChequera());
-		
+		Chequera chequera = chequeraRepository.findByIdChequera(movimientoModel.getIdChequera()); //buscar chequera
+		Tipo_Movimiento tipoMovimiento = tipoMovimientoRepository.findByIdTipoMovimiento(movimientoModel.getIdTipoMovimiento());
+		ChequeraModel chequeraModel = new ChequeraModel();
+		/*modificado el saldo*/
 		float saldo = Float.parseFloat(chequera.getChSaldo());
 		float monto = movimientoModel.getmMonto();
 		saldo = monto+saldo;
 		chequera.setChSaldo(String.valueOf(saldo));
 		float deposito = Float.parseFloat(chequera.getChAbonos())+monto;
 		chequera.setChAbonos(String.valueOf(deposito));
+		/*Modificado el saldo*/
+		
 		chequeraRepository.save(chequera);
+		chequeraModel = chequeraConverter.ChequeraToModel(chequera);
+		movimientoModel.setChequera(chequeraModel);
 		Movimientos movimiento = movimientoConverter.movimientosToEntity(movimientoModel);
+		
+		
+
+		movimiento.setTipoMovimiento(tipoMovimiento);
+		movimiento.setmStatus("true");
 		movimientoRepository.save(movimiento);
+		
 		return false;
 	}
 
 	@Override
 	public boolean retiro(MovimientosModel movimientoModel) {
 		Chequera chequera = chequeraRepository.findByIdChequera(movimientoModel.getIdChequera());
+		Tipo_Movimiento tipoMovimiento = tipoMovimientoRepository.findByIdTipoMovimiento(movimientoModel.getIdTipoMovimiento());
+		Movimientos movimiento = new Movimientos();
+		ChequeraModel chequeraModel = new ChequeraModel();
 	
 		float saldo = Float.parseFloat(chequera.getChSaldo());
 		float monto = movimientoModel.getmMonto();
 		if(movimientoModel.getmMonto()<=saldo) {
 			saldo = saldo-monto;
 			monto = Float.parseFloat(chequera.getChCargos())+monto; //retiros
-			
 		}
 		else {
 			saldo = saldo-monto;
@@ -77,6 +97,15 @@ public class MovimientosService implements IMovimientosService{
 		}
 		chequera.setChSaldo(String.valueOf(saldo));
 		chequera.setChCargos(String.valueOf(monto));
+		/*prepara para guardar*/
+		chequeraModel = chequeraConverter.ChequeraToModel(chequera);
+		movimientoModel.setChequera(chequeraModel);
+		LOG.info("save ----->"+movimientoModel.toString());
+		//movimiento.setTipoMovimiento(tipoMovimiento);
+		movimiento = movimientoConverter.movimientosToEntity(movimientoModel);
+		movimiento.setTipoMovimiento(tipoMovimiento);
+		movimiento.setmStatus("true");
+		movimientoRepository.save(movimiento);
 		return false;
 	}
 
@@ -90,6 +119,27 @@ public class MovimientosService implements IMovimientosService{
 		else
 			saldoSuficiente=false;
 		return saldoSuficiente;
+	}
+
+	@Override
+	public List<MovimientosModel> listarMovimientos() {
+		List<Movimientos> movimientos = movimientoRepository.findAll();
+		List<MovimientosModel> movimientosModel = new ArrayList<>();
+		for(Movimientos movimiento : movimientos)
+			movimientosModel.add(movimientoConverter.movimientosToModel(movimiento));
+		return movimientosModel;
+	}
+
+	@Override
+	public void tipoMovimiento(MovimientosModel movimientoModel) {
+		int tipo = movimientoModel.getIdTipoMovimiento();
+		if(tipo==1) //cargo
+			retiro(movimientoModel);
+		else if(tipo==2) //abono
+			deposito(movimientoModel);
+		else
+			LOG.info("otro");
+			
 	}
 
 }

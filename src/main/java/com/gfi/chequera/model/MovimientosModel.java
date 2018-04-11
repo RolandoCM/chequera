@@ -18,6 +18,7 @@ public class MovimientosModel {
 	private String mStatus;
 	private String mConcepto;
 	private int idChequera;
+	private int idTipoMovimiento;
 	
 	private ChequeraModel chequera;
 	private Tipo_MovimientosModel tipoMovimiento;
@@ -86,10 +87,19 @@ public class MovimientosModel {
 	public void setIdChequera(int idChequera) {
 		this.idChequera = idChequera;
 	}
+	
+	public int getIdTipoMovimiento() {
+		return idTipoMovimiento;
+	}
+	public void setIdTipoMovimiento(int idTipoMovimiento) {
+		this.idTipoMovimiento = idTipoMovimiento;
+	}
 	@Override
 	public String toString() {
 		return "MovimientosModel [idMovimiento=" + idMovimiento + ", mFecha=" + mFecha + ", mMonto=" + mMonto
-				+ ", mStatus=" + mStatus + ", mConcepto=" + mConcepto + ", chequera=" + chequera + ", tipo_movimiento="
+				+ ", mStatus=" + mStatus + ", mConcepto=" + mConcepto + ", idChequera=" + idChequera
+				+ ", idTipoMovimiento=" + idTipoMovimiento + ", chequera=" + chequera + ", tipoMovimiento="
 				+ tipoMovimiento + "]";
 	}
+	
 }

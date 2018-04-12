@@ -18,4 +18,5 @@ public interface IBancosService {
 	public List<BancosModel> listBancos();
 	public boolean deleteBanco(int idBanco);
 	public BancosModel searchBanco(int idBanco);
+	public void deleteAllBancos();
 }

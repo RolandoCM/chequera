@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<title>Clientes</title>
+<body>
+	<section th:include="menu.html"></section>
+	<!-- End Page Loading -->
+	<header id="header" class="page-topbar">
+		<div class="navbar-fixed">
+			<nav class="navbar-color">
+				<div class="nav-wrapper">
+					<div class="header-search-wrapper hide-on-med-and-down">
+						<i class="mdi-action-search"></i> <input type="text" name="Search"
+							class="header-search-input z-depth-2"
+							placeholder="Explore Materialize" />
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- START MAIN -->
+	<div id="main">
+		<!-- START WRAPPER -->
+
+		<!--breadcrumbs start-->
+		<div id="breadcrumbs-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m12 l12">
+						<h5 class="breadcrumbs-title">Chequera</h5>
+						<ol class="breadcrumbs">
+							<li><a th:href="@{/inicio}">Inicio</a></li>
+							<li><a th:href="@{/movimientos/chequeras}">Movimientos</a></li>
+							<li class="active">Chequeras</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--breadcrumbs end-->
+
+
+		<!--start container-->
+		<div class="container">
+			<div class="section">
+
+				<div class="divider"></div>
+				<div class="col s12 m8 l9">
+					<div id="table-datatables">
+
+						<div class="col s12 m8 l9">
+							<table id="data-table-simple" class="responsive-table display"
+								th:cellspacing="0">
+								<thead>
+									<tr>
+										<th>No.</th>
+										<th>Banco</th>
+										<th>Cliente</th>
+										<th>Clave bancaria</th>
+										<th>No. Cuenta</th>
+										<th>Saldo</th>
+										<th>Abonos</th>
+										<th>Cargos</th>
+										<th>Fecha Corte</th>
+										<th>Opciones</th>
+									</tr>
+								</thead>
+
+								<tfoot>
+									<tr>
+										<th>No.</th>
+										<th>Banco</th>
+										<th>Cliente</th>
+										<th>Clave bancaria</th>
+										<th>No. Cuenta</th>
+										<th>Saldo</th>
+										<th>Abonos</th>
+										<th>Cargos</th>
+										<th>Fecha Corte</th>
+										<th>Opciones</th>
+									</tr>
+								</tfoot>
+
+								<tbody>
+									<tr th:each="chequera : ${chequeras}"  th:if="${chequera.chStatus}==true" >
+										<td th:text="${chequera.idChequera}"></td>
+										<td th:text="${chequera.banco.bNombre}"></td>
+										<td th:text="${chequera.cliente.cNombre}"></td>
+										<td th:text="${chequera.chClaveInterbancaria}"></td>
+										<td th:text="${chequera.chNumCuenta}"></td>
+										<td th:text="'$ '+${chequera.chSaldo}"></td>
+										<td th:text="${chequera.chAbonos}"></td>
+										<td th:text="${chequera.chCargos}"></td>
+										<td th:text="${chequera.chFechaCorte}"></td>
+										<td><div class="col s12 m4 center">
+												<a class="waves-effect waves-light  btn"
+													th:href="@{/movimientos/form(idChequera=${chequera.idChequera})}">Transacción</a>
+													<!-- <br/><br/>
+													<a class="waves-effect waves-light  btn"
+													th:href="@{/movimientos/form(idChequera=${chequera.idChequera})}">Retiro</a> -->
+											</div>
+											</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- START FOOTER -->
+	<footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container">
+				<span>Copyright © 2018 <a class="grey-text text-lighten-4"
+					href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
+					target="_blank">Rolando Castillo</a> All rights reserved.
+				</span> <span class="right"> Design and Developed by <a
+					class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando
+						Castillo</a></span>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

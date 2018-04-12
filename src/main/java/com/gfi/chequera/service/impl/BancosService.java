@@ -52,4 +52,8 @@ public class BancosService implements IBancosService {
 		BancosModel bancoModel=bancoConverter.bancosToModel(banco);
 		return bancoModel;
 	}
+	@Override
+	public void deleteAllBancos() {
+		bancoRepository.deleteAll();
+	}
 }

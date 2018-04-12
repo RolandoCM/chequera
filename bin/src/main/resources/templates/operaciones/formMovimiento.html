@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<title>Movimiento</title>
+
+</head>
+
+<body>
+	<section th:include="menu.html"></section>
+	<!-- START MAIN -->
+	<div id="main">
+		<!-- START WRAPPER -->
+		<div class="wrapper">
+
+			<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+			<!-- START CONTENT -->
+			<section id="content">
+
+				<!--breadcrumbs start-->
+				<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+					<!-- Search for small screen -->
+					<div class="header-search-wrapper grey hide-on-large-only">
+						<i class="mdi-action-search active"></i> <input type="text"
+							name="Search" class="header-search-input z-depth-2"
+							placeholder="Explore Materialize">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col s12 m12 l12">
+								<h5 class="breadcrumbs-title">Realizar Movimiento</h5>
+								<ol class="breadcrumbs">
+									<li><a th:href="@{/inicio}">Inicio</a></li>
+									<li><a th:href="@{/movimientos/chequeras}">Operaciones</a></li>
+									<li class="active">Movimiento</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--breadcrumbs end-->
+
+
+				<!--start container-->
+				<div class="container">
+
+					<!--
+              jQuery Validation Plugin
+          -->
+					<p class="caption">Operación</p>
+					<div class="divider"></div>
+					<!--jqueryvalidation-->
+					<div id="jqueryvalidation" class="section">
+						<div class="row">
+							<div class="col s12 m12 l12">
+								<div class="col s12 m12 l6">
+									<div class="card-panel">
+										<h4 class="header2">Operación</h4>
+										<div class="row">
+											<form class="formValidate" id="formChequera" action="#"
+												th:action="@{/movimientos/add}" th:object="${movimiento}"
+												method="POST">
+												<input type="hidden" id="idMovimiento"
+													th:value="${idMovimiento}" th:field="*{idMovimiento}" /> <input
+													type="hidden" id="mStatus" th:value="${mStatus}" />
+
+												<div class="row">
+													<div class="input-field col s12">
+														<label for="No. Chequera">No. Chequera *</label> <input
+															th:value="${idChequera}" id="idChequera"
+															name="idChequera" type="text" readonly="readonly" />
+													</div>
+													<div class="input-field col s12">
+														<label for="fecha">Fecha *</label> <input
+															th:field="*{mFecha}" th:value="${mFecha}" id="mFecha"
+															name="mFecha" type="text" readonly="readonly" />
+													</div>
+													<div class="input-field col s12">
+														<label for="monto">Monto *</label> <input
+															th:field="*{mMonto}" th:value="${mMonto}" id="mMonto"
+															name="mMonto" type="text" th:required="required" />
+													</div>
+													<div class="input-field col s12">
+														<label for="concepto"> Concepto *</label> <input
+															th:field="*{mConcepto}" th:value="${mConcepto}"
+															id="mConcepto" name="mConcepto" type="text"
+															th:required="required" />
+													</div>
+													<div class="col s12 m8 l9">
+														<div class="select-wrapper initialized">
+															<select class="initialized" name="idTipoMovimiento"
+																th:required="required">
+																<option value="" th:disabled="disabled"
+																	th:selected="selected">Seleccionar Tipo
+																	Movimiento</option>
+																<option th:each="tipoMovimiento : ${tipoMovimientos}"
+																	th:value="${tipoMovimiento.idTipoMovimiento}"
+																	th:text="${tipoMovimiento.tmDescripcion}"></option>
+																	<option value="" th:disabled="disabled" 
+																	th:selected="selected">Otro</option>
+															</select>
+														</div>
+													</div>
+													<div class="input-field col s12">
+														<button class="btn waves-effect waves-light right submit"
+															type="submit" name="action">
+															Submit <i class="mdi-content-send right"></i>
+														</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END WRAPPER -->
+			</section>
+		</div>
+	</div>
+	<!-- END MAIN -->
+	<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+	<!-- START FOOTER -->
+	<footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container">
+				<span>Copyright © 2018 <a class="grey-text text-lighten-4"
+					href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
+					target="_blank">Rolando Castillo</a> All rights reserved.
+				</span> <span class="right"> Design and Developed by <a
+					class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando
+						Castillo</a></span>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript"
+		th:src="@{/js/plugins/jquery-validation/jquery.validate.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/js/plugins/jquery-validation/additional-methods.min.js}"></script>
+	<script>
+		var d = new Date();
+		dformat = [ d.getFullYear(), ('0' + d.getMonth()).slice(-2).toString(),
+				('0' + d.getDate()).slice(-2).toString() ].join('-')
+				+ ' '
+				+ [ ('0' + d.getHours()).slice(-2).toString(),
+						('0' + d.getMinutes()).slice(-2).toString(),
+						('0' + d.getSeconds()).slice(-2).toString() ].join(':');
+		document.getElementById("mFecha").value = dformat;
+		document.getElementById("mStatus").value = "true";
+	</script>
+
+
+</body>
+
+</html>

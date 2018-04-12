@@ -12,18 +12,22 @@ public class EstadoChequera {
 	private String concepto;
 	private String fecha;
 	private String tipoMovimiento;
+	private double monto;
 	
 	public EstadoChequera() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 
-	public EstadoChequera(String concepto, String fecha, String tipoMovimiento) {
+	public EstadoChequera(String concepto, String fecha, String tipoMovimiento, double monto) {
 		super();
 		this.concepto = concepto;
 		this.fecha = fecha;
 		this.tipoMovimiento = tipoMovimiento;
+		this.monto = monto;
 	}
+
 
 	public String getConcepto() {
 		return concepto;
@@ -48,6 +52,17 @@ public class EstadoChequera {
 	public void setTipoMovimiento(String tipoMovimiento) {
 		this.tipoMovimiento = tipoMovimiento;
 	}
+	
+
+	public double getMonto() {
+		return monto;
+	}
+
+
+	public void setMonto(double monto) {
+		this.monto = monto;
+	}
+
 
 	@Override
 	public String toString() {

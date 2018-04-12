@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<title>Registro Chequera</title>
+
+</head>
+
+<body>
+	<section th:include="menu.html"></section>
+	<!-- START MAIN -->
+	<div id="main">
+		<!-- START WRAPPER -->
+		<div class="wrapper">
+
+			<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+			<!-- START CONTENT -->
+			<section id="content">
+
+				<!--breadcrumbs start-->
+				<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+					<!-- Search for small screen -->
+					<div class="header-search-wrapper grey hide-on-large-only">
+						<i class="mdi-action-search active"></i> <input type="text"
+							name="Search" class="header-search-input z-depth-2"
+							placeholder="Explore Materialize">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col s12 m12 l12">
+								<h5 class="breadcrumbs-title">Registro Chequera</h5>
+								<ol class="breadcrumbs">
+									<li><a th:href="@{/inicio}">Inicio</a></li>
+									<li><a th:href="@{/chequera/listar}">Chequera</a></li>
+									<li class="active">Registro Chequera</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--breadcrumbs end-->
+
+
+				<!--start container-->
+				<div class="container">
+
+					<!--
+              jQuery Validation Plugin
+          -->
+					<p class="caption">Chequera</p>
+					<p>
+						<a href="#" target="_blank">Politicas de Seguridad</a> Es
+						necesario la validación oficial de cambios o nuevos chequeras.
+					</p>
+					<div class="divider"></div>
+					<!--jqueryvalidation-->
+					<div id="jqueryvalidation" class="section">
+						<div class="row">
+							<div class="col s12 m12 l12">
+								<div class="col s12 m12 l6">
+									<div class="card-panel">
+										<h4 class="header2">Registro de Chequera</h4>
+										<div class="row">
+											<form class="formValidate" id="formChequera" action="#"
+												th:action="@{/chequera/add}" th:object="${chequera}"
+												method="POST">
+												<div class="row">
+													
+													<div class="input-field col s12">
+														<label for="fecha">Fecha de Contrato *</label> <input
+															th:field="*{chFecha}" th:value="${chFecha}"
+															id="fechaContrato" name="fecha" type="text"  readonly="readonly"
+															/>
+													</div>
+													<div class="input-field col s12">
+														<label for="fechaCorte">Fecha de Corte *</label> <input
+															th:field="*{chFechaCorte}" th:value="${chFechaCorte}"
+															id="chFechaCorte" name="chFechaCorte" type="text" readonly="readonly" />
+													</div>
+													<div class="input-field col s12">
+														<label for="saldo"> Saldo Inicial *</label> <input
+															th:field="*{chSaldo}" th:value="${chSaldo}" id="saldo"
+															name="saldo" type="text" th:required="required"/>
+													</div>
+													<div class="input-field col s12">
+														<label for="saldo"> No. Cliente *</label> <input
+															th:field="*{idCliente}" th:value="${idCliente}" id="idCliente"
+															name="idCliente" type="text" th:required="required"/>
+													</div>
+													<div class="col s12 m8 l9">
+														<div class="select-wrapper initialized" >				
+															<select class="initialized" name="idBanco" th:required="required">
+																<option value="" th:disabled="disabled" th:selected="selected"> Seleccionar Banco</option>
+																<option th:each="banco : ${bancos}"  th:value="${banco.idBancos}" th:text="${banco.bNombre}"></option>
+															</select>
+														</div>
+													</div>
+													<div class="input-field col s12">
+														<label for="chStatus">Status *</label> <input
+															th:field="*{chStatus}" th:value="${chStatus}"
+															id="chStatus" name="chStatus" type="text"  readonly="readonly"
+															/>
+													</div>
+													 
+													<input type="hidden" id="idChequera" th:value="${idChequera}" th:field="*{idCliente}" class="invisible"/>
+													 
+													<div class="input-field col s12">
+														<button class="btn waves-effect waves-light right submit"
+															type="submit" name="action">
+															Submit <i class="mdi-content-send right"></i>
+														</button>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END WRAPPER -->
+			</section>
+		</div>
+	</div>
+	<!-- END MAIN -->
+	<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+	<!-- START FOOTER -->
+	<footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container">
+				<span>Copyright © 2018 <a class="grey-text text-lighten-4"
+					href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
+					target="_blank">Rolando Castillo</a> All rights reserved.
+				</span> <span class="right"> Design and Developed by <a
+					class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando
+						Castillo</a></span>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript"
+		th:src="@{/js/plugins/jquery-validation/jquery.validate.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/js/plugins/jquery-validation/additional-methods.min.js}"></script>
+	<script>
+	var d = new Date();
+    	dformat = [ d.getFullYear(), ('0' + d.getMonth()).slice(-2).toString(),
+			('0' + d.getDate()).slice(-2).toString() ].join('-')
+			+ ' '
+			+ [ ('0' + d.getHours()).slice(-2).toString(),
+					('0' + d.getMinutes()).slice(-2).toString(),
+					('0' + d.getSeconds()).slice(-2).toString() ].join(':');
+			document.getElementById("fechaContrato").value = dformat;
+			document.getElementById("chFechaCorte").value = ('0'+d.getDate()).slice(-2).toString();
+			document.getElementById("chStatus").value="true";
+	</script>
+	
+
+</body>
+
+</html>

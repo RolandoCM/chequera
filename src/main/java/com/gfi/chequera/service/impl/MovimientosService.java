@@ -3,6 +3,8 @@
  */
 package com.gfi.chequera.service.impl;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,11 +13,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gfi.chequera.converter.ChequeraConverter;
+import com.gfi.chequera.converter.EstadoChequeraConverter;
 import com.gfi.chequera.converter.MovimientosConverter;
 import com.gfi.chequera.entity.Chequera;
 import com.gfi.chequera.entity.Movimientos;
 import com.gfi.chequera.entity.Tipo_Movimiento;
 import com.gfi.chequera.model.ChequeraModel;
+import com.gfi.chequera.model.EstadoChequera;
 import com.gfi.chequera.model.MovimientosModel;
 import com.gfi.chequera.repository.ChequeraRepository;
 import com.gfi.chequera.repository.MovimientosRepository;
@@ -39,6 +43,8 @@ public class MovimientosService implements IMovimientosService{
 	private MovimientosConverter movimientoConverter;
 	@Autowired
 	private TipoMovimientoRepository tipoMovimientoRepository;
+	@Autowired 
+	private EstadoChequeraConverter estadoChequeraConverter;
 	
 	private final static Logger LOG = Logger.getLogger(MovimientosService.class);
 	@Override
@@ -140,6 +146,24 @@ public class MovimientosService implements IMovimientosService{
 		else
 			LOG.info("otro");
 			
+	}
+
+	/* Optener los movimientos que se realizaron sobre una chequera en un mes*/
+	@Override
+	public List<EstadoChequera> estadoChequera(String fechaInicio, String fechaCorte, int idChequera) {
+		List<EstadoChequera> estadoChequera = new ArrayList<>();
+		Chequera chequera = chequeraRepository.findByIdChequera(idChequera);
+		fechaInicio = fechaInicio + " 00:00:00";
+		fechaCorte = fechaCorte+ " 23:59:59";
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); //formato para fecha
+		LocalDateTime fechaInicioD = LocalDateTime.parse(fechaInicio, formatter);
+		LocalDateTime fechaCorteD = LocalDateTime.parse(fechaCorte, formatter);
+		List<Movimientos> movimientos = movimientoRepository.findByMFechaAfterAndMFechaBeforeAndChequeraEquals(fechaInicioD, fechaCorteD, chequera);
+		LOG.info("Size movimientos entity ---------->"+movimientos.size());
+		for(Movimientos movimiento : movimientos) {
+			estadoChequera.add(estadoChequeraConverter.movimientosToEstadoChequera(movimiento));
+		}
+		return estadoChequera;
 	}
 
 }

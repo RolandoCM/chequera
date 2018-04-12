@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<title>Analisis</title>
+<body>
+	<section th:include="menu.html"></section>
+	<!-- End Page Loading -->
+	<header id="header" class="page-topbar">
+		<div class="navbar-fixed">
+			<nav class=navbar-color>
+				<div class="nav-wrapper">
+					<div class="header-search-wrapper hide-on-med-and-down">
+						<i class="mdi-action-search"></i> <input type="text" name="Search"
+							class="header-search-input z-depth-2"
+							placeholder="Explore Materialize" />
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- START MAIN -->
+	<div id="main">
+		<!-- START WRAPPER -->
+
+		<!--breadcrumbs start-->
+		<div id="breadcrumbs-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m12 l12">
+						<h5 class="breadcrumbs-title">Analisis </h5>
+						<ol class="breadcrumbs">
+							<li><a th:href="@{/inicio}">Inicio</a></li>
+							<li><a th:href="@{/movimientos/listar}">Consulta</a></li>
+							<li class="active">Analisis</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--breadcrumbs end-->
+
+
+		<!--start container-->
+		<div class="container">
+			<div class="section">
+
+				<div class="divider"></div>
+				<div class="col s12 m8 l9">
+					
+					<div id="table-datatables">
+
+						<div class="col s12 m8 l9">
+							<table id="data-table-simple" class="responsive-table display"
+								th:cellspacing="0">
+								<thead>
+									<tr>
+										<th>Chequera</th>
+										<th>Fecha</th>
+										<th>Monto</th>
+										<th>Concepto</th>
+										<th>Tipo</th>
+										<th>Saldo</th>
+									</tr>
+								</thead>
+
+								<tfoot>
+									<tr>
+										<th>Chequera</th>
+										<th>Fecha</th>
+										<th>Monto</th>
+										<th>Concepto</th>
+										<th>Tipo</th>
+										<th>Saldo</th>
+									</tr>
+								</tfoot>
+
+								<tbody>
+									<tr th:each="movimiento : ${movimientos}">
+										<td th:text="${movimiento.chequera.idChequera}"></td>
+										<td th:text="${movimiento.mFecha}"></td>
+										<td th:text="${movimiento.mMonto}"></td>
+										<td th:text="${movimiento.mConcepto}"></td>
+										<td th:text="${movimiento.tipoMovimiento.tmDescripcion}"></td>
+										<td th:text="${movimiento.chequera.chSaldo}"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- START FOOTER -->
+	<footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container">
+				<span>Copyright © 2018 <a class="grey-text text-lighten-4"
+					href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
+					target="_blank">Rolando Castillo</a> All rights reserved.
+				</span> <span class="right"> Design and Developed by <a
+					class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando
+						Castillo</a></span>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

@@ -42,7 +42,7 @@
 </head>
 
 <body>
-	<section th:include="menu.html"></section>
+	<section th:include="@{/menu}"></section>
 	<!-- START MAIN -->
 	<div id="main">
 		<!-- START WRAPPER -->
@@ -59,7 +59,7 @@
 					<div class="header-search-wrapper grey hide-on-large-only">
 						<i class="mdi-action-search active"></i> <input type="text"
 							name="Search" class="header-search-input z-depth-2"
-							placeholder="Explore Materialize">
+							placeholder="Explore Materialize"/>
 					</div>
 					<div class="container">
 						<div class="row">
@@ -125,7 +125,7 @@
 															data-error=".errorTxt1"/>
 														<div class="errorTxt1"></div>
 													</div>
-													<input type="hidden" id="status" value=true th:value=1 th:field="*{bStatus}" class="invisible"/>
+													<input type="hidden" id="status"  th:value="${bStatus}" th:field="*{bStatus}" class="invisible"/>
 													<input type="hidden" id="idBanco" th:value="${idBancos}" th:field="*{idBancos}" class="invisible"/>
 													
 													<div class="input-field col s12">

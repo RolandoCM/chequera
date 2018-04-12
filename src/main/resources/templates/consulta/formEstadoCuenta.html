@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+	<section th:include="@{menu}"></section>
+
+
+
+
+
+	<!-- START MAIN -->
+	<div id="main">
+		<!-- START WRAPPER -->
+		<div class="wrapper">
+
+			<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+			<!-- START CONTENT -->
+			<section id="content">
+
+				<!--breadcrumbs start-->
+				<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+					<!-- Search for small screen -->
+					<div class="header-search-wrapper grey hide-on-large-only">
+						<i class="mdi-action-search active"></i> <input type="text"
+							name="Search" class="header-search-input z-depth-2"
+							placeholder="Explore Materialize" />
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col s12 m12 l12">
+								<h5 class="breadcrumbs-title">Realizar Movimiento</h5>
+								<ol class="breadcrumbs">
+									<li><a th:href="@{/inicio}">Inicio</a></li>
+									<li><a th:href="@{/movimientos/chequeras}">Operaciones</a></li>
+									<li class="active">Movimiento</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--start container-->
+				<div class="container">
+					<p class="caption">Generar Estado de chequera</p>
+					<div class="divider"></div>
+
+					<form action="" th:action="@{/reporte/estadochequera}">
+						<legend>Generar reporte en un rango de fechas</legend>
+
+						<div class="input-field col s12">
+							<label>idChequera</label> <input type="text" name="idChequera"
+								th:value="${idChequera}" readonly="readonly" />
+						</div>
+						<div class="input-field col s12">
+						Fecha Inicio
+						<input type="date" name="fechaInicio"
+							data-date-format="DD/MMMM/YYYY" /> 
+						</div>
+						<div class="input-field col s12">
+						Fecha Corte
+						<input type="date"
+							name="fechaCorte" />
+						</div>
+						  
+						<div class="input-field col s12">
+							<button class="btn waves-effect waves-light right submit"
+								type="submit" name="action">
+								Submit <i class="mdi-content-send right"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+				<!-- END WRAPPER -->
+			</section>
+		</div>
+	</div>
+</body>
+</html>

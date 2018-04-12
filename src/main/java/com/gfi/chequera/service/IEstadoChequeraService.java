@@ -11,5 +11,5 @@ import java.util.Map;
  * @date 11/04/2018
  */
 public interface IEstadoChequeraService {
-	public abstract Map<String, Object> estadoCuentaMes(int idChequera, String mes);
+	public abstract Map<String, Object> estadoCuentaMes(int idChequera, String fechaInicio, String fechaCorte);
 }

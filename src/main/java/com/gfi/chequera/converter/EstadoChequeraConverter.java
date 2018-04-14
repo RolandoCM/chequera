@@ -4,7 +4,6 @@
 package com.gfi.chequera.converter;
 
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 import org.springframework.stereotype.Component;
 

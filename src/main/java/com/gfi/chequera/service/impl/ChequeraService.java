@@ -6,6 +6,7 @@ package com.gfi.chequera.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +24,7 @@ import com.gfi.chequera.utils.CalcularDatosUnicosCuenta;
  */
 @Service("ChequeraService")
 public class ChequeraService implements IChequeraService{
+	private final static Logger LOG = Logger.getLogger(ChequeraService.class);
 	@Autowired
 	private ChequeraRepository chequeraRepository;
 	@Autowired
@@ -71,6 +73,11 @@ public class ChequeraService implements IChequeraService{
 		chequera = chequeraRepository.findByIdChequera(idChequera);
 		chequeraModel = chequeraConverter.ChequeraToModel(chequera);
 		return chequeraModel;
+	}
+	@Override
+	public void deleteAllChequera() {
+		chequeraRepository.deleteAll();
+		LOG.info("Se ha limpiado la tabla de chequeras satisfactoriamente");
 	}
 
 }

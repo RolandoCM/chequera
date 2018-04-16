@@ -1,9 +1,7 @@
 package com.gfi.chequera.service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
-import com.gfi.chequera.entity.Chequera;
 import com.gfi.chequera.model.ChequeraModel;
 import com.gfi.chequera.model.EstadoChequera;
 import com.gfi.chequera.model.MovimientosModel;
@@ -22,4 +20,5 @@ public interface IMovimientosService {
 	public List<MovimientosModel> listarMovimientos();
 	public void tipoMovimiento(MovimientosModel movimientoModel);
 	public abstract List<EstadoChequera> estadoChequera(String fechaInicio, String fechaCorte, int idChequera);
+	public abstract void deleteAllMovimientos();
 }

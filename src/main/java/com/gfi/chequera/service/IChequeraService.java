@@ -14,4 +14,5 @@ public interface IChequeraService {
 	public void saveChequera(ChequeraModel chequeraModel);
 	public boolean deleteChequera(int idChequera);
 	public ChequeraModel seachChequera(int idChequera);
+	public void deleteAllChequera();
 }

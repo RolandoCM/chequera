@@ -6,6 +6,7 @@ package com.gfi.chequera.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,7 @@ import com.gfi.chequera.service.IBancosService;
  */
 @Service("BancosService")
 public class BancosService implements IBancosService {
+	private final static Logger LOG = Logger.getLogger(BancosService.class);
 	@Autowired
 	private BancosConverter bancoConverter;
 	@Autowired
@@ -55,5 +57,15 @@ public class BancosService implements IBancosService {
 	@Override
 	public void deleteAllBancos() {
 		bancoRepository.deleteAll();
+	}
+	@Override
+	public void carga(List<BancosModel> bancosModel) {
+		List<Bancos> bancos = new ArrayList<>();
+		for(BancosModel bancoModel : bancosModel) {
+			Bancos banco = bancoConverter.bancosToEntity(bancoModel);
+			bancos.add(banco);
+		}
+		bancoRepository.save(bancos);
+		LOG.info("Lista de entidades banco guardada satisfactoriamente");
 	}
 }

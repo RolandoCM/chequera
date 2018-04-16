@@ -16,5 +16,7 @@ public interface IClientesService {
 	public void saveCliente(ClientesModel clienteModel);
 	public boolean deleteCliente(int idCliente);
 	public ClientesModel searchCliente(int idCliente);
+	public void deleteAllClientes();
+	public void cargaClientes(List<ClientesModel> clientesModel);
 
 }

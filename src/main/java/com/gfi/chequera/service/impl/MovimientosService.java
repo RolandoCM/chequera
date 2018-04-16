@@ -166,4 +166,10 @@ public class MovimientosService implements IMovimientosService{
 		return estadoChequera;
 	}
 
+	@Override
+	public void deleteAllMovimientos() {
+		movimientoRepository.deleteAll();
+		LOG.info("Se ha limpio la tabla de Movimientos");
+	}
+
 }

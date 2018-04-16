@@ -79,4 +79,20 @@ public class ClientesService implements IClientesService{
 		return clienteModel;
 	}
 
+	@Override
+	public void deleteAllClientes() {
+		clienteRepository.deleteAll();
+		LOG.info("Se ha limpiado la table de Clientes satisfactoriamente");
+		
+	}
+
+	@Override
+	public void cargaClientes(List<ClientesModel> clientesModel) {
+		List<Clientes> clientes = new ArrayList<>();
+		for(ClientesModel clienteModel : clientesModel) 
+			clientes.add(clienteConverter.clientesToEntity(clienteModel));
+		clienteRepository.save(clientes);
+		LOG.info("Se guardo lista de entidades clientes satisfactoriamente");
+	}
+
 }

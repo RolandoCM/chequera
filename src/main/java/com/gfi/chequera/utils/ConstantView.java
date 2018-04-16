@@ -32,4 +32,7 @@ public class ConstantView {
 	public final static String ANALISIS_SALDO = "consulta/analisisSaldo";
 	public final static String LISTA_CHEQUERAS_OPERACIONES ="consulta/chequeraConsultas";
 	public final static String FORM_ESTADO_CUENTA = "consulta/formEstadoCuenta";
+	
+	/*Utilerias */
+	public final static String UTILERIAS = "utilerias/utilerias";
 }

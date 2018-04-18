@@ -23,8 +23,6 @@ import com.gfi.chequera.service.impl.EstadoChequeraService;
 import com.gfi.chequera.service.impl.MovimientosService;
 import com.gfi.chequera.utils.ConstantView;
 
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-
 /**
  * @author Rolando Castillo
  * @email castillomartinez@acm.org
@@ -58,7 +56,8 @@ public class EstadoChequeraController {
 		ecView.setUrl("classpath:reports/estadoChequera.jrxml");
 		ecView.setApplicationContext(appContext);
 		parameters = estadoChequeraService.estadoCuentaMes(idChequera, fechaInicio, fechaCorte);
-
+		
+		
 		ModelAndView mav = new ModelAndView(ecView, parameters);
 		LOG.info("Params--------->" + parameters);
 		return mav;

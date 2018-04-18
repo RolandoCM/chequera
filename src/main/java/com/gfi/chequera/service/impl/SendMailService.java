@@ -27,6 +27,20 @@ public class SendMailService implements ISendMailService{
 	private JavaMailSender emailSender;
 	
 	@Override
+	public boolean sendMailMessage(MailModel mail, String path, String nameFile) throws MessagingException {
+		MimeMessage message = emailSender.createMimeMessage();
+		MimeMessageHelper helper = new MimeMessageHelper(message, true);
+		
+		helper.setSubject(mail.getSubject());
+		helper.setText(mail.getContent());
+		helper.setTo(mail.getTo());
+		helper.setFrom(mail.getFrom());
+		
+		helper.addAttachment(nameFile, new ClassPathResource(path));
+		emailSender.send(message);
+		return false;
+	} 
+	@Override
 	public boolean sendMailMessage(MailModel mail) throws MessagingException {
 		MimeMessage message = emailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message, true);
@@ -36,7 +50,7 @@ public class SendMailService implements ISendMailService{
 		helper.setTo(mail.getTo());
 		helper.setFrom(mail.getFrom());
 		
-		helper.addAttachment("logo", new ClassPathResource(""));
+		//helper.addAttachment(nameFile, new ClassPathResource(path));
 		emailSender.send(message);
 		return false;
 	} 

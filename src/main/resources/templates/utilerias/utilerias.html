@@ -167,7 +167,7 @@
 									enctype="multipart/form-data">
 									<div class="col s12 m8 l9">
 										<input type="file" id="file2" class="dropify"
-											onchange="return fileValidation()" name="file"
+											onchange="return fileValidation2()" name="file"
 											data-default-file="" th:required="required" />
 									</div>
 									<div id="imagePreview"></div>
@@ -263,7 +263,7 @@
         	});
     	}
 	 }
-	function  fileValidation(){
+	function  fileValidation2(){
     	var archivo = $("#file2").val();
     	var extensiones = archivo.substring(archivo.lastIndexOf("."));
     	if(extensiones != ".txt" && extensiones != ".csv")

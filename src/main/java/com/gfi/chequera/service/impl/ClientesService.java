@@ -50,6 +50,7 @@ public class ClientesService implements IClientesService{
 	@Override
 	public void saveCliente(ClientesModel clienteModel) {
 		cliente = clienteConverter.clientesToEntity(clienteModel);
+		cliente.setcStatus(true);
 		clienteRepository.save(cliente);
 		MailModel mail = new MailModel();
 		

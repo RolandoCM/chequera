@@ -31,6 +31,7 @@ public class BancosService implements IBancosService {
 	@Override
 	public void saveBanco(BancosModel bancoModel) {
 		Bancos banco = bancoConverter.bancosToEntity(bancoModel);
+		banco.setbStatus(true);
 		bancoRepository.save(banco);
 	}
 	@Override

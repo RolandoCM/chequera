@@ -13,5 +13,6 @@ import com.gfi.chequera.model.MailModel;
  * @date 08/04/2018
  */
 public interface ISendMailService {
+	public boolean sendMailMessage(MailModel mail, String path, String nameFile)throws MessagingException;
 	public boolean sendMailMessage(MailModel mail)throws MessagingException;
 }

@@ -4,10 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-<title>Analisis</title>
+<title>Operaciones Chequeras</title>
 </head>
 <body>
-	<section th:include="@{menu}"></section>
+	<section th:include="@{/menu}"></section>
 	<!-- End Page Loading -->
 	<header id="header" class="page-topbar">
 		<div class="navbar-fixed">
@@ -31,11 +31,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col s12 m12 l12">
-						<h5 class="breadcrumbs-title">Analisis </h5>
+						<h5 class="breadcrumbs-title">Chequera</h5>
 						<ol class="breadcrumbs">
 							<li><a th:href="@{/inicio}">Inicio</a></li>
-							<li><a th:href="@{/movimientos/listar}">Consulta</a></li>
-							<li class="active">Analisis</li>
+							<li><a th:href="@{/chequera/listar}">Chequera</a></li>
+							<li class="active">Lista</li>
 						</ol>
 					</div>
 				</div>
@@ -58,34 +58,60 @@
 								th:cellspacing="0">
 								<thead>
 									<tr>
-										<th>Chequera</th>
-										<th>Fecha</th>
-										<th>Monto</th>
-										<th>Concepto</th>
-										<th>Tipo</th>
+										<th>No.</th>
+										<th>Banco</th>
+										<th>Cliente</th>
+										<th>Fecha Contrato</th>
+										<th>Clave bancaria</th>
+										<th>No. Cuenta</th>
 										<th>Saldo</th>
+										<th>Abonos</th>
+										<th>Cargos</th>
+										<th>Fecha Corte</th>
+										<th>Status</th>
+										<th>Opciones</th>
 									</tr>
 								</thead>
 
 								<tfoot>
 									<tr>
-										<th>Chequera</th>
-										<th>Fecha</th>
-										<th>Monto</th>
-										<th>Concepto</th>
-										<th>Tipo</th>
+										<th>No.</th>
+										<th>Banco</th>
+										<th>Cliente</th>
+										<th>Fecha Contrato</th>
+										<th>Clave bancaria</th>
+										<th>No. Cuenta</th>
 										<th>Saldo</th>
+										<th>Abonos</th>
+										<th>Cargos</th>
+										<th>Fecha Corte</th>
+										<th>Status</th>
+										<th>Opciones</th>
 									</tr>
 								</tfoot>
 
 								<tbody>
-									<tr th:each="movimiento : ${movimientos}">
-										<td th:text="${movimiento.chequera.idChequera}"></td>
-										<td th:text="${movimiento.mFecha}"></td>
-										<td th:text="${movimiento.mMonto}"></td>
-										<td th:text="${movimiento.mConcepto}"></td>
-										<td th:text="${movimiento.tipoMovimiento.tmDescripcion}"></td>
-										<td th:text="${movimiento.chequera.chSaldo}"></td>
+									<tr th:each="chequera : ${chequeras}">
+										<td th:text="${chequera.idChequera}"></td>
+										<td th:text="${chequera.banco.bNombre}"></td>
+										<td th:text="${chequera.cliente.cNombre}"></td>
+										<td th:text="${chequera.chFecha}"></td>
+										<td th:text="${chequera.chClaveInterbancaria}"></td>
+										<td th:text="${chequera.chNumCuenta}"></td>
+										<td th:text="'$ '+${chequera.chSaldo}"></td>
+										<td th:text="${chequera.chAbonos}"></td>
+										<td th:text="${chequera.chCargos}"></td>
+										<td th:text="${chequera.chFechaCorte}"></td>
+										<td th:text="${chequera.chStatus}"></td>
+										<td>
+										<div th:if="${chequera.chStatus}==true" class="col s12 m4 center">
+												<a class="btn-floating btn-large waves-effect waves-light "
+													th:href="@{/reporte/form(idChequera=${chequera.idChequera})}"><i
+													class="mdi-content-forward"></i></a> 
+											</div>
+											<div th:if="${chequera.chStatus}==false" class="col s12 m4 center">
+											<a class="btn-floating btn-large waves-effect waves-light"><i class="mdi-action-https center"></i></a></div>
+											</td>
 									</tr>
 								</tbody>
 							</table>

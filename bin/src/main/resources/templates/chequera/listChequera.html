@@ -5,12 +5,13 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 <title>Clientes</title>
+</head>
 <body>
-	<section th:include="menu.html"></section>
+	<section th:include="@{menu}"></section>
 	<!-- End Page Loading -->
 	<header id="header" class="page-topbar">
 		<div class="navbar-fixed">
-			<nav class=navbar-color>
+			<nav class="navbar-color">
 				<div class="nav-wrapper">
 					<div class="header-search-wrapper hide-on-med-and-down">
 						<i class="mdi-action-search"></i> <input type="text" name="Search"
@@ -118,10 +119,10 @@
 										<td th:text="${chequera.chFechaCorte}"></td>
 										<td th:text="${chequera.chStatus}"></td>
 										<td><div th:if="${chequera.chStatus}==true" class="col s12 m4 center">
-												<a class="btn-floating btn-large waves-effect waves-light "
+												<!-- <a class="btn-floating btn-large waves-effect waves-light "
 													th:href="@{/chequera/formupdate(idChequera=${chequera.idChequera})}"><i
-													class="mdi-content-forward"></i></a> <a
-													th:href=@{/chequera/delete(idChequera=${chequera.idChequera})}
+													class="mdi-content-forward"></i></a> --> <a
+													th:href="@{/chequera/delete(idChequera=${chequera.idChequera})}"
 													class="btn-floating waves-effect waves-light "><i
 													class="mdi-content-clear"></i></a>
 											</div>

@@ -5,12 +5,13 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 <title>Clientes</title>
+</head>
 <body>
-	<section th:include="menu.html"></section>
+	<section th:include="@{/menu}"></section>
 	<!-- End Page Loading -->
 	<header id="header" class="page-topbar">
 		<div class="navbar-fixed">
-			<nav class=navbar-color>
+			<nav class="navbar-color">
 				<div class="nav-wrapper">
 					<div class="header-search-wrapper hide-on-med-and-down">
 						<i class="mdi-action-search"></i> <input type="text" name="Search"
@@ -107,7 +108,7 @@
 												<a class="btn-floating btn-large waves-effect waves-light "
 													th:href="@{/cliente/formupdate(idCliente=${cliente.idCliente})}"><i
 													class="mdi-content-forward"></i></a> <a
-													th:href=@{/cliente/delete(idCliente=${cliente.idCliente})}
+													th:href="@{/cliente/delete(idCliente=${cliente.idCliente})}"
 													class="btn-floating waves-effect waves-light "><i
 													class="mdi-content-clear"></i></a>
 											</div>
@@ -140,5 +141,4 @@
 		</div>
 	</footer>
 </body>
-
 </html>

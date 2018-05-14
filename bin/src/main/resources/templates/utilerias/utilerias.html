@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<title>Utilerias</title>
+
+<!--dropify-->
+<link th:href="@{/js/plugins/dropify/css/dropify.min.css}"
+	type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<body>
+	<section th:include="@{/menu}"></section>
+	<!-- End Page Loading -->
+	<header id="header" class="page-topbar">
+		<div class="navbar-fixed">
+			<nav class="navbar-color">
+				<div class="nav-wrapper">
+					<div class="header-search-wrapper hide-on-med-and-down">
+						<i class="mdi-action-search"></i> <input type="text" name="Search"
+							class="header-search-input z-depth-2"
+							placeholder="Explore Materialize" />
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- START MAIN -->
+	<div id="main">
+		<!-- START WRAPPER -->
+
+		<!--breadcrumbs start-->
+		<div id="breadcrumbs-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m12 l12">
+						<h5 class="breadcrumbs-title">Utilerias</h5>
+						<ol class="breadcrumbs">
+							<li><a th:href="@{/inicio}">Inicio</a></li>
+							<li><a th:href="@{/utilerias}">Utilerias</a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--breadcrumbs end-->
+
+
+		<!--start container-->
+		<div class="container">
+			<div class="section">
+
+				<div class="divider"></div>
+
+				<!-- Movimientos -->
+				<div class="col s12 m8 l9">
+					<div class="card  light-blue">
+						<div class="card-content white-text">
+							<span class="card-title">MOVIMIENTOS</span>
+							<!--Default version-->
+							<div class="row section">
+								<div class="col s12 m4 l3">
+									<a class="waves-effect waves-light btn modal-trigger "
+										href="#modalMovimientos"> Limpiar Movimientos <i
+										class="mdi-content-send right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="modalMovimientos" class="modal">
+						<div class="modal-content">
+							<h3>¿Esta seguro de borrar los registros de Movimientos?</h3>
+						</div>
+						<div class="modal-footer">
+							<a th:href="@{/utilerias}"
+								class="waves-effect waves-red btn-flat modal-action modal-close">No</a>
+							<a th:href="@{/utilerias/limpiarMovimientos}"
+								class="waves-effect waves-green btn-flat modal-action modal-close">Si</a>
+						</div>
+					</div>
+				</div>
+					
+					<!-- Chequeras -->
+				<div class="col s12 m8 l9">
+					<div class="card  light-blue">
+						<div class="card-content white-text">
+							<span class="card-title">CHEQUERAS</span>
+							<!--Default version-->
+							<div class="row section">
+								<div class="col s12 m4 l3">
+									<a class="waves-effect waves-light btn modal-trigger "
+										href="#modalChequeras"> Limpiar Chequeras <i
+										class="mdi-content-send right"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+
+					<div id="modalChequeras" class="modal">
+						<div class="modal-content">
+							<h3>¿Esta seguro de borrar los registros de chequeras?</h3>
+						</div>
+						<div class="modal-footer">
+							<a th:href="@{/utilerias}"
+								class="waves-effect waves-red btn-flat modal-action modal-close">No</a>
+							<a th:href="@{/utilerias/limpiarChequeras}"
+								class="waves-effect waves-green btn-flat modal-action modal-close">Si</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m8 l9">
+					<div class="card  light-blue">
+						<div class="card-content white-text">
+							<span class="card-title">BANCOS</span><br /> <span
+								class="card-title">Subir archivo .csv o .txt</span>
+							<!--Default version-->
+							<div class="row section">
+								<form method="POST" th:action="@{/utilerias/cargaBancos}"
+									enctype="multipart/form-data">
+									<div class="col s12 m8 l9">
+										<input type="file" id="file" class="dropify"
+											onchange="return fileValidation()" name="file"
+											data-default-file="" th:required="required" />
+									</div>
+									<div class="col s12 m4 l3">
+										<button class="btn waves-effect waves-light " type="submit"
+											name="action">
+											Enviar <i class="mdi-content-send right"></i>
+										</button>
+										<br /> <br /> <a
+											class="waves-effect waves-light btn modal-trigger "
+											href="#modal1"> Limpiar Bancos <i
+											class="mdi-content-send right"></i>
+										</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div id="modal1" class="modal">
+						<div class="modal-content">
+							<h3>¿Esta seguro de borrar los registros de bancos?</h3>
+						</div>
+						<div class="modal-footer">
+							<a th:href="@{/utilerias}"
+								class="waves-effect waves-red btn-flat modal-action modal-close">No</a>
+							<a th:href="@{/utilerias/limpiarBancos}"
+								class="waves-effect waves-green btn-flat modal-action modal-close">Si</a>
+						</div>
+					</div>
+				</div>
+				<!-- Cargar clientes -->
+				<div class="col s12 m8 l9">
+					<div class="card  light-blue">
+						<div class="card-content white-text">
+							<span class="card-title">CLIENTES</span><br /> <span
+								class="card-title">Subir archivo .csv o .txt</span>
+							<!--Default version-->
+							<div class="row section">
+								<form method="POST" th:action="@{/utilerias/cargaClientes}"
+									enctype="multipart/form-data">
+									<div class="col s12 m8 l9">
+										<input type="file" id="file2" class="dropify"
+											onchange="return fileValidation2()" name="file"
+											data-default-file="" th:required="required" />
+									</div>
+									<div id="imagePreview"></div>
+									<div class="col s12 m4 l3">
+										<button class="btn waves-effect waves-light " type="submit"
+											name="action">
+											Enviar <i class="mdi-content-send right"></i>
+										</button>
+										<br /> <br /> <a
+											class="waves-effect waves-light btn modal-trigger "
+											href="#modal2"> Limpiar Clientes <i
+											class="mdi-content-send right"></i>
+										</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div id="modal2" class="modal">
+						<div class="modal-content">
+							<h3>¿Esta seguro de borrar los registros de clientes?</h3>
+						</div>
+						<div class="modal-footer">
+							<a th:href="@{/utilerias}"
+								class="waves-effect waves-red btn-flat modal-action modal-close">No</a>
+							<a th:href="@{/utilerias/limpiarClientes}"
+								class="waves-effect waves-green btn-flat modal-action modal-close">Si</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- START FOOTER -->
+	<footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container">
+				<span>Copyright © 2018 <a class="grey-text text-lighten-4"
+					href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"
+					target="_blank">Rolando Castillo</a> All rights reserved.
+				</span> <span class="right"> Design and Developed by <a
+					class="grey-text text-lighten-4" href="http://geekslabs.com/">Rolando
+						Castillo</a></span>
+			</div>
+		</div>
+	</footer>
+	<!-- dropify -->
+	<script type="text/javascript"
+		th:src="@{/js/plugins/dropify/js/dropify.min.js}"></script>
+	<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+	<script type="text/javascript" th:src="@{/js/plugins.min.js}"></script>
+	<!--custom-script.js - Add your own theme custom JS-->
+	<script type="text/javascript" th:src="@{/js/custom-script.js}"></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+            // Basic
+            $('.dropify').dropify();
+
+            // Translated
+            $('.dropify-fr').dropify({
+                messages: {
+                    default: 'Glissez-déposez un fichier ici ou cliquez',
+                    replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                    remove:  'Supprimer',
+                    error:   'Désolé, le fichier trop volumineux'
+                }
+            });
+
+            // Used events
+            var drEvent = $('.dropify-event').dropify();
+
+            drEvent.on('dropify.beforeClear', function(event, element){
+                return confirm("Do you really want to delete \"" + element.filename + "\" ?");
+            });
+
+            drEvent.on('dropify.afterClear', function(event, element){
+                alert('File deleted');
+            });
+        });
+    </script>
+	<script type="text/javascript">
+ 	// <![CDATA[
+	function  fileValidation(){
+    	var archivo = $("#file").val();
+    	var extensiones = archivo.substring(archivo.lastIndexOf("."));
+    	if(extensiones != ".txt" && extensiones != ".csv")
+    	{
+        	alert("El archivo de tipo " + extensiones + " no es válido");
+        	$(document).ready(function(){
+        		$('input').val("");
+        	});
+    	}
+	 }
+	function  fileValidation2(){
+    	var archivo = $("#file2").val();
+    	var extensiones = archivo.substring(archivo.lastIndexOf("."));
+    	if(extensiones != ".txt" && extensiones != ".csv")
+    	{
+        	alert("El archivo de tipo " + extensiones + " no es válido");
+        	$(document).ready(function(){
+        		$('input').val("");
+        	});
+    	}
+	 }
+ 	// ]]>
+    </script>
+</body>
+
+</html>

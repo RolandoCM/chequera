@@ -35,11 +35,6 @@ public class BancoController {
 	
 	private static final Logger logger = Logger.getLogger(BancoController.class);
 	
-	/*@PostMapping("/insert")
-	public String nuevoBanco(@ModelAttribute(name="banco") BancosModel bancoModel) {
-		bancoService.saveBanco(bancoModel);
-		return ConstantView.insertBanco;
-	}*/
 	@GetMapping("/form")
 	public ModelAndView formInsert() {
 		ModelAndView mav = new ModelAndView(ConstantView.formBanco);

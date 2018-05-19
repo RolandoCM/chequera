@@ -13,14 +13,14 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class CalcularDatosUnicosCuenta {
-	private final static Logger LOG = Logger.getLogger(CalcularDatosUnicosCuenta.class);
+	private static final  Logger LOG = Logger.getLogger(CalcularDatosUnicosCuenta.class);
 	public String calculaNumeroCuenta(int idBanco, int idCliente) {
-		StringBuffer noCuenta = new StringBuffer();
-		String sIdBanco = String.valueOf(idBanco);
+		StringBuilder noCuenta = new StringBuilder();
+		StringBuilder sIdBanco = new StringBuilder();
+		sIdBanco.append(idBanco);
 		String sIdCliente = String.valueOf(idCliente);
-		//LOG.info("sIdCliente: " +sIdCliente.length()+" sIdBanco: "+sIdBanco.length());
 		while(sIdBanco.length()<3)
-			sIdBanco = "0"+sIdBanco;
+			sIdBanco.append("0");
 		
 		while(sIdCliente.length()<3)
 			sIdCliente = "0"+sIdCliente;
@@ -33,7 +33,7 @@ public class CalcularDatosUnicosCuenta {
 		return noCuenta.toString();
 	}
 	public String calculaClaveIntervancaria(String numCuenta) {
-		StringBuffer claveBancaria = new StringBuffer();
+		StringBuilder claveBancaria = new StringBuilder();
 		int clave = (int) (Math.floor(Math.random()*(100000-999999+1)+999999));
 		claveBancaria.append(numCuenta);
 		claveBancaria.append(clave);

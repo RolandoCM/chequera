@@ -5,9 +5,7 @@ package com.gfi.chequera.service.impl;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,9 +15,7 @@ import javax.mail.MessagingException;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
-import org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView;
 
 import com.gfi.chequera.converter.MovimientosConverter;
 import com.gfi.chequera.model.ChequeraModel;
@@ -27,11 +23,8 @@ import com.gfi.chequera.model.EstadoChequera;
 import com.gfi.chequera.model.MailModel;
 import com.gfi.chequera.repository.MovimientosRepository;
 import com.gfi.chequera.service.IEstadoChequeraService;
-import com.lowagie.text.pdf.PdfWriter;
 
 import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JRExporter;
-import net.sf.jasperreports.engine.JRExporterParameter;
 import net.sf.jasperreports.engine.JRParameter;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -52,7 +45,7 @@ import net.sf.jasperreports.export.SimplePdfReportConfiguration;
  */
 @Service
 public class EstadoChequeraService implements IEstadoChequeraService{
-	private final static Logger LOG = Logger.getLogger(EstadoChequeraService.class);
+	private static final Logger LOG = Logger.getLogger(EstadoChequeraService.class);
 	@Autowired
 	private MovimientosRepository movimientoRepository;
 	@Autowired
@@ -69,7 +62,6 @@ public class EstadoChequeraService implements IEstadoChequeraService{
 		ChequeraModel chequeraModel = new ChequeraModel();
 		List<EstadoChequera> listMovimientosModel = new ArrayList<>();
 		chequeraModel = chequeraService.seachChequera(idChequera);
-		//listMovimientosModel = movimientoService.listarMovimientos();
 		listMovimientosModel = movimientoService.estadoChequera(fechaInicio, fechaCorte, idChequera);
 		LOG.info("Size list ------"+listMovimientosModel.size());
 		JRBeanCollectionDataSource movimientosDS = new JRBeanCollectionDataSource(listMovimientosModel);

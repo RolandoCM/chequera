@@ -1,7 +1,8 @@
-/**
- * 
- */
 package com.gfi.chequera;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
 
 import com.gfi.chequera.utils.CalcularDatosUnicosCuenta;
 
@@ -15,10 +16,10 @@ public class PruebaCuenta {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	@Test
+	public void testCalculaCuenta() {
 		CalcularDatosUnicosCuenta c = new CalcularDatosUnicosCuenta();
-		String numCuenta = c.calculaNumeroCuenta(22, 340);
-		c.calculaClaveIntervancaria(numCuenta);
+		assertNotNull(c.calculaNumeroCuenta(22, 340));
 	}
 
 }

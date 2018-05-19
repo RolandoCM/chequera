@@ -48,7 +48,6 @@ public class Chequera {
 	
 	public Chequera() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Chequera(int idChequera, LocalDateTime chFecha, String chClaveInterbancaria, String chNumCuenta, String chSaldo,

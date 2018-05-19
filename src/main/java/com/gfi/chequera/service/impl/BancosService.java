@@ -23,7 +23,7 @@ import com.gfi.chequera.service.IBancosService;
  */
 @Service("BancosService")
 public class BancosService implements IBancosService {
-	private final static Logger LOG = Logger.getLogger(BancosService.class);
+	private static final Logger LOG = Logger.getLogger(BancosService.class);
 	@Autowired
 	private BancosConverter bancoConverter;
 	@Autowired
@@ -52,8 +52,8 @@ public class BancosService implements IBancosService {
 	@Override
 	public BancosModel searchBanco(int idBanco) {
 		Bancos banco =bancoRepository.findByIdBancos(idBanco);
-		BancosModel bancoModel=bancoConverter.bancosToModel(banco);
-		return bancoModel;
+		
+		return bancoConverter.bancosToModel(banco);
 	}
 	@Override
 	public void deleteAllBancos() {
